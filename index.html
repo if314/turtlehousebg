@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Turtle House — Love Sports, Love Beer</title>
+  <meta name="description" content="The Turtle House — a warm, steady sports pub. Love Sports, Love Beer." />
+  <meta property="og:title" content="The Turtle House" />
+  <meta property="og:description" content="Love Sports, Love Beer." />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Slabo+27px&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Base / Tokens ===== */
+    :root{
+      --forest:#2A3B35;   /* Forest Green */
+      --orange:#B25E3A;   /* Orange */
+      --butter:#D8A35D;   /* Butter */
+      --cream:#D9C9B6;    /* Cream */
+      --ink:#0f1613;
+      --paper:#fffdf9;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.18);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height:1.6;
+      color: var(--forest);
+      background: var(--paper);
+    }
+    h1,h2,h3,.logo-word{font-family:"Slabo 27px", serif}
+    a{color:var(--orange);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* ===== Header / Hero ===== */
+    .site-header{
+      position:relative;
+      color:#fff;
+      min-height:64svh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      isolation:isolate;
+    }
+    .hero-media{
+      position:absolute; inset:0; z-index:-2; overflow:hidden; border-bottom-left-radius: clamp(0px, 4vw, 32px); border-bottom-right-radius: clamp(0px, 4vw, 32px);
+    }
+    .hero-media img{
+      width:100%; height:100%; object-fit:cover; filter: saturate(.9) contrast(.95);
+      transform:scale(1.02);
+    }
+    .hero-overlay{
+      position:absolute; inset:0; z-index:-1;
+      background: linear-gradient(180deg, rgba(42,59,53,.75), rgba(42,59,53,.85));
+      backdrop-filter: saturate(120%) blur(0.5px);
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px; margin-bottom:10px; justify-content:center;
+    }
+    .logo{
+      width:52px; height:52px; border-radius:999px; background: var(--cream);
+      box-shadow: inset 0 0 0 4px var(--forest), var(--shadow);
+      display:grid; place-items:center; overflow:hidden;
+    }
+    .logo svg{width:70%; height:70%}
+    .logo-word{letter-spacing:.5px; font-size: clamp(26px, 6vw, 44px); color: var(--butter);}
+    .tagline{margin-top:6px; font-weight:600; color: #fff; opacity:.95;}
+
+    .cta-row{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
+    .btn{
+      display:inline-block; padding:12px 16px; border-radius:999px; font-weight:600;
+      background: var(--butter); color: var(--forest); box-shadow: var(--shadow);
+    }
+    .btn.ghost{background: rgba(217,201,182,.15); color:#fff; border:1px solid rgba(255,255,255,.35)}
+
+    /* ===== Nav (mobile-first anchor menu) ===== */
+    nav{position:sticky; top:0; background: var(--paper); z-index:5; border-bottom:1px solid #e7e0d6}
+    .nav-inner{display:flex; gap:10px; justify-content:center; max-width:1000px; margin:auto; padding:10px}
+    .nav-inner a{padding:10px 12px; border-radius:999px; background:#fff; border:1px solid #eee; color:var(--forest); font-weight:600}
+    .nav-inner a:focus-visible{outline:3px dashed var(--butter); outline-offset:2px}
+
+    /* ===== Sections ===== */
+    .wrap{max-width:1000px; margin:auto; padding:28px 18px}
+    section{margin-block:18px}
+    .card{
+      background:#fff; border:1px solid #eee; border-radius: var(--radius); box-shadow: var(--shadow); padding:18px;
+    }
+    h2{margin:.2em 0 .6em; font-size: clamp(20px, 5vw, 30px)}
+    .lead{color:#3b514a}
+
+    /* Menu grid */
+    .menu-grid{display:grid; grid-template-columns:1fr; gap:12px}
+    .menu-item{display:flex; justify-content:space-between; gap:10px; border-bottom:1px dashed #e6e1d9; padding:10px 0}
+    .menu-item span:first-child{font-weight:600}
+    .badge{background:var(--forest); color:var(--cream); border-radius:6px; padding:2px 8px; font-size:.8rem}
+
+    /* Location / map */
+    .location .map{
+      height:300px; border-radius: var(--radius); background:#e9e3da;
+      background-image: linear-gradient(135deg, rgba(178,94,58,.12), rgba(42,59,53,.08));
+      display:grid; place-items:center; font-weight:600; color:#4b5d56
+    }
+
+    /* Events */
+    .events-list{display:grid; gap:12px}
+    .event{display:grid; gap:6px; border:1px solid #eee; border-radius:12px; padding:12px; background:#fffdfc}
+    .event .when{font-weight:700; color:var(--orange)}
+
+    /* Footer */
+    footer{
+      background: var(--forest); color: var(--cream); padding:28px 18px; margin-top:24px;
+      border-top-left-radius: clamp(0px, 4vw, 24px); border-top-right-radius: clamp(0px, 4vw, 24px);
+    }
+    .footer-grid{display:grid; gap:18px}
+    .copy{opacity:.8; font-size:.9rem}
+
+    /* ===== Responsive tweaks ===== */
+    @media (min-width:700px){
+      .menu-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns: 2fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO / rebranded Babayaga photo -->
+  <header class="site-header" role="banner" aria-label="Turtle House">
+    <div class="hero-media" aria-hidden="true">
+      <img src="oldbabayaga.jpg" alt="Street view of the cozy corner bar exterior at night" loading="lazy">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="wrap" style="padding-block: 36px;">
+      <div class="brand" aria-label="The Turtle House brand">
+        <div class="logo" aria-hidden="true">
+          <!-- Simple turtle-shell mark -->
+          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M32 8c10 0 18 8 18 18 0 14-18 30-18 30S14 40 14 26c0-10 8-18 18-18Z" stroke="var(--forest)" stroke-width="4" fill="var(--butter)"/>
+            <path d="M22 24h20M24 32h16M22 40h20" stroke="var(--forest)" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-word" aria-label="The Turtle House">The Turtle House</div>
+      </div>
+      <p class="tagline">Love Sports, Love Beer</p>
+      <div class="cta-row">
+        <a class="btn" href="#menu">View Menu</a>
+        <a class="btn ghost" href="#events">This Week’s Events</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky nav (Menu / Location / Events) -->
+  <nav aria-label="Primary">
+    <div class="nav-inner">
+      <a href="#menu">Menu</a>
+      <a href="#location">Location</a>
+      <a href="#events">Events</a>
+    </div>
+  </nav>
+
+  <main id="content">
+    <!-- MENU -->
+    <section id="menu" class="wrap">
+      <div class="card">
+        <h2>Menu</h2>
+        <p class="lead">Pints poured without rush. Simple, craft-forward picks and hearty bites.</p>
+        <div class="menu-grid" role="list">
+          <div class="menu-item" role="listitem">
+            <span>House Lager</span><span>6</span>
+          </div>
+          <div class="menu-item" role="listitem">
+            <span>Session IPA</span><span>7</span>
+          </div>
+          <div class="menu-item" role="listitem">
+            <span>Butter Pretzel <span class="badge">Fan favorite</span></span><span>6</span>
+          </div>
+          <div class="menu-item" role="listitem">
+            <span>Smoky Nuts</span><span>5</span>
+          </div>
+          <div class="menu-item" role="listitem">
+            <span>Game-Day Burger</span><span>12</span>
+          </div>
+          <div class="menu-item" role="listitem">
+            <span>Veggie Flatbread</span><span>10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="wrap location">
+      <div class="card">
+        <h2>Location</h2>
+        <p class="lead">Corner spot. Warm lights. Take your time finding your seat.</p>
+        <p><strong>The Turtle House — Plovdiv</strong><br>
+          12 Slow Lane, Kapana District, Plovdiv<br>
+          Open daily · 16:00 – 01:00</p>
+        <div class="map" aria-label="Map placeholder">
+          Map embed placeholder — swap for your Google Maps iframe
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="wrap">
+      <div class="card">
+        <h2>Events</h2>
+        <div class="events-list">
+          <article class="event">
+            <div class="when">Thu · 19:00</div>
+            <div class="what"><strong>Quiz Night</strong> — teams of 2–6. Slow and steady wins the pint.</div>
+          </article>
+          <article class="event">
+            <div class="when">Sat · 21:00</div>
+            <div class="what"><strong>Live Match Screening</strong> — big sound upstairs, cozy seats downstairs.</div>
+          </article>
+          <article class="event">
+            <div class="when">Sun · 18:00</div>
+            <div class="what"><strong>Acoustic Session</strong> — unhurried sets, warm lights.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER / CONTACT -->
+  <footer role="contentinfo">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="brand" style="justify-content:flex-start">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path d="M32 8c10 0 18 8 18 18 0 14-18 30-18 30S14 40 14 26c0-10 8-18 18-18Z" stroke="var(--forest)" stroke-width="4" fill="var(--butter)"/>
+              <path d="M22 24h20M24 32h16M22 40h20" stroke="var(--forest)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="logo-word" style="color:var(--cream)">The Turtle House</div>
+        </div>
+        <p class="copy">“Slow and Steady Wins the Pint.”</p>
+      </div>
+      <div>
+        <h3 style="margin:0 0 8px">Contact</h3>
+        <p class="copy">
+          <a href="tel:+359000000000" style="color:var(--butter)">+359 00 000 000</a><br>
+          <a href="mailto:hello@turtlehouse.bar" style="color:var(--butter)">hello@turtlehouse.bar</a><br>
+          @theturtlehousebar
+        </p>
+      </div>
+    </div>
+    <div class="wrap" style="padding-top:0">
+      <p class="copy">© <span id="y"></span> The Turtle House</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth-scroll for in-page nav
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
