@@ -10,251 +10,339 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="img/og.jpg" />
 
-  <!-- Fonts (Dirty‑Pretty vibe: elegant serif + clean grotesk) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Brand palette (from your upload) */
-      --forest:#2A3B35;   /* Forest Green */
-      --orange:#B25E3A;   /* Orange (rusty copper) */
-      --choc:#5C3A21;     /* Chocolate */
-      --cream:#D9C9B6;    /* Cream */
-      /* Derived “candy" accents (slightly brighter/sweeter) */
-      --butter:#E6B769;   /* richer butter for CTAs (derived) */
-      --amber: #FFC873;   /* glow accent */
+      --forest:#2A3B35;
+      --orange:#B25E3A;
+      --choc:#5C3A21;
+      --cream:#D9C9B6;
+
+      --butter:#E6B769;
+      --amber:#FFC873;
+
       --forest-ink:#0E1714;
-      --paper:#0C0F0E;    /* deep page background */
+      --paper:#0C0F0E;
       --muted:#a79686;
+
       --radius:16px;
       --shadow:0 10px 30px rgba(0,0,0,.35);
-      --blur: saturate(105%) contrast(102%);
     }
 
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;background:var(--forest-ink);color:var(--cream);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.65}
+    body{
+      margin:0;
+      background:var(--forest-ink);
+      color:var(--cream);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;display:block}
     a{color:var(--amber);text-decoration:none}
     a:hover{text-decoration:underline}
 
-    /* Top announcement */
-    .announce{position:sticky;top:0;z-index:50;background:linear-gradient(90deg, rgba(255,200,115,.18), rgba(178,94,58,.25));color:var(--cream);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .announce .wrap{display:flex;gap:12px;align-items:center;justify-content:center;padding:10px 16px;font-weight:600}
-    .announce .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px rgba(255,200,115,.15)}
+    /* Shared container */
+    .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
 
-    /* Header / hero */
-    header{position:relative;isolation:isolate}
-    .nav{position:sticky;top:0;z-index:40;background:rgba(12,15,14,.7);backdrop-filter: blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav .wrap{max-width:1100px;margin:auto;padding:14px 18px;display:flex;align-items:center;gap:18px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{width:44px;height:44px;object-fit:contain;filter: drop-shadow(0 4px 10px rgba(0,0,0,.35))}
-    .brand .word{font-family:Marcellus, serif;font-size:22px;letter-spacing:.5px}
-    .nav a{opacity:.92}
-    .nav a:hover{opacity:1}
+    /* Announcement (mobile-first) */
+    .announce{
+      position:sticky; top:0; z-index:60;
+      background:linear-gradient(90deg, rgba(255,200,115,.18), rgba(178,94,58,.25));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .announce .bar{
+      display:flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:10px 0;
+      font-weight:700;
+      text-align:center;
+      font-size:14px;
+    }
+    .announce .dot{
+      width:8px;height:8px;border-radius:50%;
+      background:var(--amber);
+      box-shadow:0 0 0 3px rgba(255,200,115,.15);
+      flex:0 0 auto;
+    }
+
+    /* Nav (mobile-first) */
+    .nav{
+      position:sticky; top:40px; z-index:50; /* sits under announcement */
+      background:rgba(12,15,14,.78);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav .row{
+      display:flex; align-items:center; gap:12px;
+      padding:12px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width:0}
+    .brand img{
+      width:40px;height:40px;object-fit:contain;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
+      flex:0 0 auto;
+    }
+    .brand .word{
+      font-family:Marcellus, serif;
+      font-size:18px;
+      letter-spacing:.4px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
     .spacer{flex:1}
-    .cta{padding:10px 14px;border-radius:999px;background:linear-gradient(180deg,var(--amber),#E1A540);color:#28180E;font-weight:800;border:1px solid rgba(0,0,0,.2);box-shadow:0 10px 20px rgba(0,0,0,.35)}
+    .cta{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;
+      border-radius:999px;
+      background:linear-gradient(180deg,var(--amber),#E1A540);
+      color:#28180E;
+      font-weight:900;
+      border:1px solid rgba(0,0,0,.2);
+      box-shadow:0 10px 20px rgba(0,0,0,.35);
+      font-size:14px;
+      white-space:nowrap;
+    }
 
-    .hero{min-height:74svh;display:grid;place-items:center;text-align:center;position:relative;
-      background: 
-  radial-gradient(1000px 500px at 50% 25%, rgba(42, 59, 53, 0.85), rgba(42, 59, 53, 0.95)), 
-  linear-gradient(180deg, rgba(25, 38, 33, 0.9), rgba(15, 22, 19, 0.98)), 
-  url('img/doors_warm.jpg') center / cover no-repeat fixed;}
-    .hero .inner{max-width:1000px;padding:120px 18px}
-    h1,h2,h3{font-family:Marcellus, serif;color:#fff;margin:0 0 .4em;line-height:1.08}
-    h1{font-size: clamp(42px, 6vw, 80px);}
-    h2{font-size: clamp(28px, 4vw, 40px);}
-    .kicker{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-weight:700;letter-spacing:.4px}
-    .sub{color:var(--cream);opacity:.86;max-width:700px;margin:10px auto 0}
+    /* Hero (mobile-first) */
+    header{position:relative;isolation:isolate}
+    .hero{
+      min-height:70svh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      position:relative;
+      background:
+        radial-gradient(900px 420px at 50% 25%, rgba(42,59,53,.82), rgba(42,59,53,.94)),
+        linear-gradient(180deg, rgba(25,38,33,.92), rgba(15,22,19,.98)),
+        url('img/doors_warm.jpg') center / cover no-repeat;
+      /* removed fixed attachment for mobile performance */
+    }
+    .hero .inner{
+      padding:72px 0 54px;
+    }
+    h1,h2,h3{
+      font-family:Marcellus, serif;
+      color:#fff;
+      margin:1em;
+      line-height:1.08;
+    }
+    h1{font-size:clamp(34px, 9vw, 64px)}
+    h2{font-size:clamp(24px, 5.5vw, 38px)}
+    h3{font-size:clamp(18px, 4.6vw, 24px)}
 
-    /* Sections */
-    section{padding:64px 18px}
-    .wrap{max-width:1100px;margin:auto}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:800;
+      letter-spacing:.35px;
+      font-size:13px;
+    }
+    .sub{
+      color:var(--cream);
+      opacity:.9;
+      max-width:42ch;
+      margin:10px auto 0;
+      font-size:15px;
+    }
 
-    .cards{display:grid;grid-template-columns:1fr;gap:16px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:var(--shadow);padding:18px}
-    .card h3{margin-top:4px}
+    /* Buttons: full-width on mobile */
+    .actions{
+      margin-top:18px;
+      display:grid;
+      gap:10px;
+      max-width:420px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      background:linear-gradient(180deg,var(--butter),#D59940);
+      color:#2C1C10;
+      font-weight:900;
+      border:1px solid rgba(0,0,0,.25);
+      box-shadow:var(--shadow);
+      transition:transform .12s ease, filter .12s ease;
+      width:100%;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none}
+    .btn.alt{
+      background:linear-gradient(180deg,#B25E3A,#8E462B);
+      color:#fff;
+    }
 
-    @media(min-width:820px){.cards{grid-template-columns:1fr 1fr 1fr}}
+    /* Sections (mobile-first spacing) */
+    section{padding:46px 0}
+    .block{
+      background:linear-gradient(180deg, rgba(178,94,58,.18), rgba(42,59,53,.18));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:16px;
+      padding:16px;
+    }
 
-    .menu-grid{display:grid;gap:14px}
-    @media(min-width:860px){.menu-grid{grid-template-columns:1fr 1fr}}
-    .menu-item{display:flex;justify-content:space-between;gap:14px;padding:12px;border-bottom:1px dashed rgba(255,255,255,.08)}
-    .menu-item .name{font-weight:700}
-    .menu-item .price{color:var(--amber);font-weight:800}
+    /* About */
+    .cards{display:grid; gap:14px; margin-top:12px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
 
-    .block{background:linear-gradient(180deg, rgba(178,94,58,.18), rgba(42,59,53,.18));border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
+    /* Gallery: 1-col on mobile */
+    .gallery{display:grid; gap:12px; margin-top:16px}
+    .gallery img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:14px;
+    }
 
-    .gallery{display:grid;gap:12px}
-    .gallery img{width:100%;height:300px;object-fit:cover;border-radius:14px}
-    @media(min-width:820px){.gallery{grid-template-columns:2fr 1fr 1fr}}
-
-    /* Events */
-    .event-hero{min-height:46svh;border-radius:18px;padding:36px;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.7)),url('img/newyear.jpg') center/cover no-repeat;display:grid;align-content:end}
-    .event-hero h2{margin:0}
-    .event-hero .meta{opacity:.9}
-
-    .event-list{display:grid;gap:14px;margin-top:16px}
-    .event{display:grid;gap:10px;padding:16px;border:1px solid rgba(255,255,255,.06);border-radius:12px;background:rgba(255,255,255,.03)}
-    .tags{display:flex;flex-wrap:wrap;gap:8px}
-    .tag{padding:4px 10px;border-radius:999px;background:rgba(255,200,115,.14);border:1px solid rgba(255,200,115,.28);color:var(--amber);font-weight:700}
-
-    /* Visit */
-    .visit-grid{display:grid;gap:16px}
-    @media(min-width:860px){.visit-grid{grid-template-columns:1.4fr 1fr}}
-    .map{height:320px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    /* Visit: stacked on mobile */
+    .visit-grid{display:grid; gap:14px; margin-top:12px}
+    .map{
+      height:320px;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .map iframe{width:100%;height:100%;border:0}
 
     /* Footer */
-    footer{margin-top:48px;background:linear-gradient(180deg, #131916, #0C100E);border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
-    footer .wrap{padding:28px 18px;display:grid;gap:16px}
-    @media(min-width:820px){footer .wrap{grid-template-columns:2fr 1fr}}
+    footer{
+      margin-top:38px;
+      background:linear-gradient(180deg, #131916, #0C100E);
+      border-top:1px solid rgba(255,255,255,.06);
+      color:var(--muted);
+    }
+    footer .grid{padding:22px 0; display:grid; gap:14px}
     .brand-mini{display:flex;align-items:center;gap:10px}
-    .brand-mini img{width:36px;height:36px}
-    .small{font-size:.92rem;opacity:.9}
+    .brand-mini img{width:34px;height:34px}
+    .small{font-size:.92rem;opacity:.92}
 
-    /* Utilities */
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:linear-gradient(180deg,var(--butter),#D59940);color:#2C1C10;font-weight:800;border:1px solid rgba(0,0,0,.25);box-shadow:var(--shadow)}
-    .btn:hover{transform:translateY(-1px)}
-    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+    /* Desktop enhancements */
+    @media (min-width: 820px){
+      .wrap{padding:0 18px}
+      .announce .bar{font-size:15px}
+      .brand img{width:44px;height:44px}
+      .brand .word{font-size:22px}
+      .hero .inner{padding:110px 0 86px}
+      .sub{font-size:16px; max-width:62ch}
+      .actions{grid-template-columns:1fr 1fr; max-width:520px}
+      section{padding:64px 0}
+      .gallery{grid-template-columns:2fr 1fr 1fr}
+      .gallery img{height:300px}
+      .visit-grid{grid-template-columns:1.4fr 1fr; align-items:start}
+      footer .grid{grid-template-columns:2fr 1fr; align-items:start}
+    }
+
+    /* Motion safety */
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto !important}
+      .btn{transition:none}
+    }
   </style>
 </head>
 <body>
-  <!-- 7) Announcement strip -->
+
   <div class="announce" role="status" aria-live="polite">
     <div class="wrap">
-      <span class="dot" aria-hidden="true"></span>
-      <span><strong>Opening day December 1st. — join us for a New Year bash 🐢 -</strong> <em>Worth the wait.</em></span>
+      <div class="bar">
+        <span class="dot" aria-hidden="true"></span>
+        <span><strong>From football and hoops to fights and rugby. We’ve got it all. 🐢</strong></span>
+      </div>
     </div>
   </div>
 
   <header>
-    <!-- Nav -->
     <nav class="nav">
       <div class="wrap">
-        <div class="brand">
-          <!-- 4) Mascot usage -->
-          <img src="img/TheTurtleHouse-Logo-Icon.svg" alt="Turtle House logo" />
-          <div class="word">The Turtle House</div>
+        <div class="row">
+          <div class="brand">
+            <img src="img/TheTurtleHouse-Logo-Icon.svg" alt="Turtle House logo" />
+            <div class="word">The Turtle House</div>
+          </div>
+          <div class="spacer"></div>
+          <a class="cta" href="https://www.instagram.com/turtlehouseplovdiv" target="_blank" rel="noopener">Follow Updates</a>
         </div>
-        <div class="spacer"></div>
-        <a href="#home" class="pill">Home</a>
-       <!-- <a href="#menu" class="pill">Menu</a>-->
-        <a href="#events" class="pill">Events</a>
-        <a href="#visit" class="pill">Visit</a>
-        <a class="cta" href="https://www.instagram.com/turtlehouseplovdiv" target="_blank" rel="noopener style="color:#000">Follow Updates</a>
       </div>
     </nav>
 
-    <!-- Hero -->
     <div id="home" class="hero">
-      <div class="inner">
-        <span class="kicker">Neighborhood • Sports • Cozy</span>
-        <h1>Where Fans Become Family</h1>
-        <p class="sub">A warm corner in Kapana with screens for the big matches, craft-forward pours, and that slow‑and‑steady Turtle vibe.</p>
-        <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-          <a class="btn" href="#events">See Events</a>
-          <a class="btn" href="#visit" style="background:linear-gradient(180deg,#B25E3A,#8E462B);color:#fff">Find Us</a>
+      <div class="wrap">
+        <div class="inner">
+          <span class="kicker">Neighborhood • Sports • Cozy</span>
+          <h1>Where Fans Become Family</h1>
+          <p class="sub">A warm corner in Kapana with screens for the big matches, craft-forward pours, and that slow-and-steady Turtle vibe.</p>
+
+          <div class="actions">
+            <a class="btn" href="#events">See Events</a>
+            <a class="btn alt" href="#visit">Find Us</a>
+          </div>
+           
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- About / Highlights -->
     <section class="wrap" aria-labelledby="about">
       <h2 id="about">A cozy sports bar in the heart of Plovdiv</h2>
-      <div class="cards"> 
-        <div>
-          <h3>Big Games, Good Company</h3>
-          <p>Match nights with proper sound, no rush, and lots of cheers.</p>
-        </div>
-      </div>
 
-      <div class="gallery" style="margin-top:18px">
+     
+
+      <div class="gallery">
         <img src="img/yellowdoor.png" alt="Yellow doors glowing at night" />
         <img src="img/party.png" alt="Beer being poured" />
         <img src="img/cheers.png" alt="Cozy bar vibes" />
       </div>
     </section>
 
-    <!-- Menu (simple, expandable 
-    <section id="menu" class="wrap" aria-labelledby="menu-h">
-      <h2 id="menu-h">Menu Highlights</h2>
-      <div class="menu-grid block" style="margin-top:12px">
-        <div>
-          <div class="menu-item"><span class="name">House Lager</span><span class="price">6 лв</span></div>
-          <div class="menu-item"><span class="name">Amber Ale</span><span class="price">7 лв</span></div>
-          <div class="menu-item"><span class="name">Seasonal Tap</span><span class="price">7–8 лв</span></div>
-          <div class="menu-item"><span class="name">Whiskey Highball</span><span class="price">8 лв</span></div>
-        </div>
-        <div>
-          <div class="menu-item"><span class="name">Fries with Aioli</span><span class="price">6 лв</span></div>
-          <div class="menu-item"><span class="name">Grilled Sausage Roll</span><span class="price">8 лв</span></div>
-          <div class="menu-item"><span class="name">Pretzel + Mustard</span><span class="price">5 лв</span></div>
-          <div class="menu-item"><span class="name">Game‑day Platter</span><span class="price">14 лв</span></div>
-        </div>
-      </div>
-    </section>later) -->
-
-    <!-- EVENTS -->
-   <!-- <section id="events" class="wrap" aria-labelledby="events-h">
+    <!-- EVENTS (optional section anchor so buttons don’t break) -->
+    <section id="events" class="wrap" aria-labelledby="events-h">
       <h2 id="events-h">Events</h2>
-
-     
-      <div class="event-hero" role="region" aria-label="Featured event">
-        <div>
-          <div class="pill" style="display:inline-block;margin-bottom:8px">Featured</div>
-          <h2>New Year’s Bash — 31 Dec, 21:00</h2>
-          <p class="meta">Св. Климент 7, Пловдив · Music · Countdown · Welcome drink</p>
-          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn" href="#" onclick="return addICS('New Year’s Bash at The Turtle House','Св. Климент 7, Пловдив','20251231T190000Z','20260101T020000Z','Ring in the New Year with us — music, friends, and cozy vibes.');">Add to Calendar</a>
-            <a class="btn" style="background:linear-gradient(180deg,#B25E3A,#8E462B);color:#fff" href="https://www.instagram.com/theturtlehouse_plovdiv/" target="_blank" rel="noopener">DM to RSVP</a>
-          </div>
-        </div>
+      <div class="block">
+        <p class="small" style="margin:0;opacity:.92">Schedule posted on Instagram. DM to request a match.</p>
       </div>
+    </section>
 
-      
-      <div class="event-list">
-        <div class="event">
-          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
-            <strong>Premier League Weekend</strong>
-            <span class="tag">Live Sports</span>
-          </div>
-          <div class="meta">Fri – Sun · Games schedule posted every Friday on IG</div>
-        </div>
-        <div class="event">
-          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
-            <strong>Soft Launch Night</strong>
-            <span class="tag">Friends & Family</span>
-          </div>
-          <div class="meta">Date TBA — watch this space</div>
-        </div>
-      </div>
-    </section>-->
-
-    <!-- VISIT -->
     <section id="visit" class="wrap" aria-labelledby="visit-h">
       <h2 id="visit-h">Visit</h2>
+
       <div class="visit-grid">
         <div class="block">
-          <p><strong>Address:</strong> Св. Климент 7, Пловдив (Kapana)</p>
-          <p><strong>Hours:</strong> 4PM - 11PM </p>
+          <p style="margin-top:0"><strong>Address:</strong> Св. Климент 7, Пловдив (Kapana)</p>
+          <p><strong>Hours:</strong> 4PM – 11PM</p>
           <p><strong>Contact:</strong> <a href="mailto:team@turtlehousebg.com">team@turtlehousebg.com</a> · <a href="tel:+359877221197">+359 87 722 1197</a></p>
-          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+
+          <div class="actions" style="max-width:none;margin-top:12px">
             <a class="btn" href="https://www.instagram.com/turtlehouseplovdiv/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria" target="_blank" rel="noopener">Get Direction</a>
+            <a class="btn alt" href="https://www.google.com/maps/dir/?api=1&destination=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria" target="_blank" rel="noopener">Get Directions</a>
           </div>
         </div>
-        <div class="map">
-        <iframe
-  src="https://www.google.com/maps?q=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria&output=embed"
-  width="100%"
-  height="450"
-  style="border:0;"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe> 
+
+        <div class="map" aria-label="Map">
+          <iframe
+            src="https://www.google.com/maps?q=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="The Turtle House location map"></iframe>
         </div>
       </div>
     </section>
@@ -262,51 +350,26 @@
 
   <footer>
     <div class="wrap">
-      <div>
-        <div class="brand-mini">
-          <img src="img/TheTurtleHouse-Logo-Icon.svg" alt="Turtle House logo small" />
-          <div>
-            <strong>The Turtle House</strong><br>
-            <span class="small">© <span id="y">2025</span> · Plovdiv</span>
+      <div class="grid">
+        <div>
+          <div class="brand-mini">
+            <img src="img/TheTurtleHouse-Logo-Icon.svg" alt="Turtle House logo small" />
+            <div>
+              <strong style="color:var(--cream)">The Turtle House</strong><br>
+              <span class="small">© <span id="y">2025</span> · Plovdiv</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="small">
-        “Where friends are family.”<br>
-     · Kapana District
+        <div class="small">
+          “Where fans become family.”<br>
+          Kapana District
+        </div>
       </div>
     </div>
   </footer>
 
   <script>
-    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Simple .ics generator for Events
-    function addICS(title, location, startUTC, endUTC, description){
-      const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//The Turtle House//Events//EN',
-        'CALSCALE:GREGORIAN',
-        'BEGIN:VEVENT',
-        'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z',
-        'DTSTART:' + startUTC,
-        'DTEND:' + endUTC,
-        'SUMMARY:' + title,
-        'LOCATION:' + location,
-        'DESCRIPTION:' + (description||''),
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-      const blob = new Blob([ics], {type:'text/calendar'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = (title||'event').replace(/\s+/g,'_') + '.ics';
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      setTimeout(()=>URL.revokeObjectURL(url), 2000);
-      return false;
-    }
   </script>
 </body>
 </html>
