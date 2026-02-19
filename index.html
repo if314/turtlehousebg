@@ -1,378 +1,2238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Turtle House — Plovdiv</title>
-  <meta name="description" content="The Turtle House — neighborhood sports bar in Plovdiv. Where fans become family." />
-  <meta property="og:title" content="The Turtle House — Plovdiv" />
-  <meta property="og:description" content="Opening day December 1st · Cozy sports bar · Where fans become family." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="img/og.jpg" />
+    <meta charset="utf-8">
+    <title>The turtle house sports bar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-  <style>
-    :root{
-      --forest:#2A3B35;
-      --orange:#B25E3A;
-      --choc:#5C3A21;
-      --cream:#D9C9B6;
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
 
-      --butter:#E6B769;
-      --amber:#FFC873;
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-      --forest-ink:#0E1714;
-      --paper:#0C0F0E;
-      --muted:#a79686;
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-      --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--forest-ink);
-      color:var(--cream);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
-      line-height:1.65;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    img{max-width:100%;display:block}
-    a{color:var(--amber);text-decoration:none}
-    a:hover{text-decoration:underline}
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-    /* Shared container */
-    .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
-
-    /* Announcement (mobile-first) */
-    .announce{
-      position:sticky; top:0; z-index:60;
-      background:linear-gradient(90deg, rgba(255,200,115,.18), rgba(178,94,58,.25));
-      backdrop-filter: blur(6px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .announce .bar{
-      display:flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:10px 0;
-      font-weight:700;
-      text-align:center;
-      font-size:14px;
-    }
-    .announce .dot{
-      width:8px;height:8px;border-radius:50%;
-      background:var(--amber);
-      box-shadow:0 0 0 3px rgba(255,200,115,.15);
-      flex:0 0 auto;
-    }
-
-    /* Nav (mobile-first) */
-    .nav{
-      position:sticky; top:40px; z-index:50; /* sits under announcement */
-      background:rgba(12,15,14,.78);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav .row{
-      display:flex; align-items:center; gap:12px;
-      padding:12px 0;
-    }
-    .brand{display:flex; align-items:center; gap:10px; min-width:0}
-    .brand img{
-      width:40px;height:40px;object-fit:contain;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
-      flex:0 0 auto;
-    }
-    .brand .word{
-      font-family:Marcellus, serif;
-      font-size:18px;
-      letter-spacing:.4px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .spacer{flex:1}
-    .cta{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 12px;
-      border-radius:999px;
-      background:linear-gradient(180deg,var(--amber),#E1A540);
-      color:#28180E;
-      font-weight:900;
-      border:1px solid rgba(0,0,0,.2);
-      box-shadow:0 10px 20px rgba(0,0,0,.35);
-      font-size:14px;
-      white-space:nowrap;
-    }
-
-    /* Hero (mobile-first) */
-    header{position:relative;isolation:isolate}
-    .hero{
-      min-height:70svh;
-      display:grid;
-      place-items:center;
-      text-align:center;
-      position:relative;
-      background:
-        radial-gradient(900px 420px at 50% 25%, rgba(42,59,53,.82), rgba(42,59,53,.94)),
-        linear-gradient(180deg, rgba(25,38,33,.92), rgba(15,22,19,.98)),
-        url('img/doors_warm.jpg') center / cover no-repeat;
-      /* removed fixed attachment for mobile performance */
-    }
-    .hero .inner{
-      padding:72px 0 54px;
-    }
-    h1,h2,h3{
-      font-family:Marcellus, serif;
-      color:#fff;
-      margin:1em;
-      line-height:1.08;
-    }
-    h1{font-size:clamp(34px, 9vw, 64px)}
-    h2{font-size:clamp(24px, 5.5vw, 38px)}
-    h3{font-size:clamp(18px, 4.6vw, 24px)}
-
-    .kicker{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.12);
-      font-weight:800;
-      letter-spacing:.35px;
-      font-size:13px;
-    }
-    .sub{
-      color:var(--cream);
-      opacity:.9;
-      max-width:42ch;
-      margin:10px auto 0;
-      font-size:15px;
-    }
-
-    /* Buttons: full-width on mobile */
-    .actions{
-      margin-top:18px;
-      display:grid;
-      gap:10px;
-      max-width:420px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .btn{
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:14px;
-      background:linear-gradient(180deg,var(--butter),#D59940);
-      color:#2C1C10;
-      font-weight:900;
-      border:1px solid rgba(0,0,0,.25);
-      box-shadow:var(--shadow);
-      transition:transform .12s ease, filter .12s ease;
-      width:100%;
-    }
-    .btn:hover{transform:translateY(-1px); text-decoration:none}
-    .btn.alt{
-      background:linear-gradient(180deg,#B25E3A,#8E462B);
-      color:#fff;
-    }
-
-    /* Sections (mobile-first spacing) */
-    section{padding:46px 0}
-    .block{
-      background:linear-gradient(180deg, rgba(178,94,58,.18), rgba(42,59,53,.18));
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:16px;
-      padding:16px;
-    }
-
-    /* About */
-    .cards{display:grid; gap:14px; margin-top:12px}
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:16px;
-      box-shadow:var(--shadow);
-      padding:16px;
-    }
-
-    /* Gallery: 1-col on mobile */
-    .gallery{display:grid; gap:12px; margin-top:16px}
-    .gallery img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:14px;
-    }
-
-    /* Visit: stacked on mobile */
-    .visit-grid{display:grid; gap:14px; margin-top:12px}
-    .map{
-      height:320px;
-      border-radius:14px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);
-    }
-    .map iframe{width:100%;height:100%;border:0}
-
-    /* Footer */
-    footer{
-      margin-top:38px;
-      background:linear-gradient(180deg, #131916, #0C100E);
-      border-top:1px solid rgba(255,255,255,.06);
-      color:var(--muted);
-    }
-    footer .grid{padding:22px 0; display:grid; gap:14px}
-    .brand-mini{display:flex;align-items:center;gap:10px}
-    .brand-mini img{width:34px;height:34px}
-    .small{font-size:.92rem;opacity:.92}
-
-    /* Desktop enhancements */
-    @media (min-width: 820px){
-      .wrap{padding:0 18px}
-      .announce .bar{font-size:15px}
-      .brand img{width:44px;height:44px}
-      .brand .word{font-size:22px}
-      .hero .inner{padding:110px 0 86px}
-      .sub{font-size:16px; max-width:62ch}
-      .actions{grid-template-columns:1fr 1fr; max-width:520px}
-      section{padding:64px 0}
-      .gallery{grid-template-columns:2fr 1fr 1fr}
-      .gallery img{height:300px}
-      .visit-grid{grid-template-columns:1.4fr 1fr; align-items:start}
-      footer .grid{grid-template-columns:2fr 1fr; align-items:start}
-    }
-
-    /* Motion safety */
-    @media (prefers-reduced-motion: reduce){
-      *{scroll-behavior:auto !important}
-      .btn{transition:none}
-    }
-  </style>
+    <style>
+        body {
+            background-color: #26322D !important;
+        }
+    </style>
 </head>
-<body>
 
-  <div class="announce" role="status" aria-live="polite">
-    <div class="wrap">
-      <div class="bar">
-        <span class="dot" aria-hidden="true"></span>
-        <span><strong>From football and hoops to fights and rugby. We’ve got it all. 🐢</strong></span>
-      </div>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><img src="img/logo.png" alt="Logo"> </i>The Turtle House</h1>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#menu" class="nav-item nav-link">Menu</a>
+                    </div>
+                 
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container my-5 py-5">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="display-3 text-white animated slideInLeft">Your friendly neighborhood sports bar
+                            </h1>
+                            <p class="text-primary animated slideInLeft mb-4 pb-2">Where Fans Become Family</p>
+                            <!--  <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>-->
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                            <img class="img-fluid" src="img/hero.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5" id="#about">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-futbol text-primary mb-4"></i>
+                                <h5>Good games, better company
+                                </h5>
+                                <p>Big matches, shared tables, and the kind of atmosphere where strangers become
+                                    regulars.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-beer text-primary mb-4"></i>
+
+                                <h5>Drinks worth slowing down for
+                                </h5>
+                                <p>Carefully picked beers, classic cocktails, and a few Turtle House originals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-calendar text-primary mb-4"></i>
+                                <h5>Events that feel personal
+                                </h5>
+                                <p>Quiz nights, tournaments, themed evenings, and community gatherings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-star text-primary mb-4"></i>
+                                <h5>Host your own night
+                                </h5>
+                                <p>Reserve a table or rent a space for birthdays, meetups, or private celebrations.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+                                    src="img/about-1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"
+                                    src="img/about-2.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
+                                    src="img/about-3.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                                    src="img/about-4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Find Us!</h5>
+                        <h1 class="mb-4">A cozy sports bar in the heart of Plovdiv</h1>
+                        <p class="mb-4">Address: Св. Климент 7, Пловдив (Kapana)</p>
+                        <p class="mb-4">Hours: 4PM – 11PM</p>
+                        <p class="mb-4">Contact: team@turtlehousebg.com · +359 87 722 1197</p>
+
+                        <a class="btn btn-primary py-3 px-5 mt-2"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria"
+                            target="_blank" rel="noopener">Get Directions</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="https://www.instagram.com/turtlehouseplovdiv/"
+                            target="_blank" rel="noopener">Talk to us on Instagram</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5" id="menu">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Menu</h5>
+                    <h1 class="mb-5">Most Popular Items</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                                href="#tab-1">
+                                <i class="fa fa-2x fa-beer text-primary"></i>
+
+                                <div class="ps-3">
+                                    <small class="text-body">Popular</small>
+                                    <h6 class="mt-n1 mb-0">Beer & Wine</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill"
+                                href="#tab-2">
+                                <i class="fas fa-2x fa-cocktail text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Special</small>
+                                    <h6 class="mt-n1 mb-0">Dringks</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                                href="#tab-3">
+                                <i class="fas fa-2x fa-glass-cheers text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Lovely</small>
+                                    <h6 class="mt-n1 mb-0">Liquors</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                                href="#tab-4">
+                                <i class="fas fa-2x fa-mug-hot text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Lovely</small>
+                                    <h6 class="mt-n1 mb-0">Other</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Schumensko Buttle</span>
+                                                <span class="text-primary">&euro;2.30 / 4.50 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Шуменско / Бутилка / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Schumensko Draft</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Шуменско / Наливна / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Carlsberg Draft</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Карлсберг / Наливна / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Carlsberg Bottle</span>
+                                                <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Карлсберг / Бутилка / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Pirinsko Bottle</span>
+                                                <span class="text-primary">&euro;2.30 / 4.50 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Пиринско / Бутилка / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tuborg Bottle</span>
+                                                <span class="text-primary">&euro;2.30 / 4.50 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Туборг / Бутилка / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Erdinger Bottle</span>
+                                                <span class="text-primary">&euro;4.50 / 8.80 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ердингер / Бутилка / 500ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Budweiser Bottle</span>
+                                                <span class="text-primary">&euro;3.50 / 6.85 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Будвайзер / Бутилка / 0ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Girmbergen Ambre Bottle</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Гримберген Амбре / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Somersby Mango</span>
+                                                <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Съмърсби Манго / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Somersby Apple</span>
+                                                <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Съмърсби Ябълка / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Carlsberg 0%</span>
+                                                <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Карлсберг 0% / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Grimbergen Blonde Bottle</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Гримберген Блонд / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>1664 Blanc Bottle</span>
+                                                <span class="text-primary">&euro;3.50 / 6.85 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">1664 Блан / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Corona Bottle</span>
+                                                <span class="text-primary">&euro;4.50 / 8.80 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Корона / Бутилка / 330ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>White</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бяло / 250ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rose</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Розе / 250ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Champagne</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Шампанско / 250ml</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- cocktails -->
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Sidecar</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Сайдкар</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Americano</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Американо</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Aperol Spritz</span>
+                                                <span class="text-primary">&euro;7.50 / 14.67 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Аперол Шприц</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Champagne Cocktail</span>
+                                                <span class="text-primary">&euro;7.50 / 14.67 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Шампанско Коктейл</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>French 75</span>
+                                                <span class="text-primary">&euro;7.50 / 14.67 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Френч 75</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Mimosa</span>
+                                                <span class="text-primary">&euro;7.50 / 14.67 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Мимоза</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Bees Knees</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бийс Нийс</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Enzoni</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ензони</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Gin Gimlet</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джин Гимлет</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Grapefruit Drop</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Грейпфрут Дроп</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Negroni</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Негрони</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tom Collins</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Том Колинс</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Jägerita</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Йегерита</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Surfer on Acid</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Сърфър он Ейсид</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Jungle Bird</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джънгъл Бърд</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Mai Tai</span>
+                                                <span class="text-primary">&euro;7.00 / 13.69 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Май Тай</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Moito</span>
+                                                <span class="text-primary">&euro;7.00 / 13.69 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Мохито</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Dark N stormy</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Дарк енд Сторми</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Cuba Libre</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Куба Либре</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Caipirnha</span>
+                                                <span class="text-primary">&euro;7.50 / 14.67 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Кайпириня</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Penicillin</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Пеницилин</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rob Roy</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Роб Рой</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rusty Nail</span>
+                                                <span class="text-primary">&euro;6.50 / 12.71 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ръсти Нейл</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Elder Smoke</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Елдър Смоук</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Paloma</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Палома</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tequila Sunrise</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Текила Сънрайз</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>AMF</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">АМФ</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Bay Breeze</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бей Бриз</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Black Russian</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Блек Ръшън</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Cape Codder</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Кейп Кодър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Harvey Wallbanger/Screwdriver</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Харви Уолбангър / Скрудрайвър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Long Island Ice Tea</span>
+                                                <span class="text-primary">&euro;7.00 / 13.69 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Лонг Айлънд Айс Тий</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Mind Eraser</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Майнд Ирейзър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Moscow Mule</span>
+                                                <span class="text-primary">&euro;6.50 / 12.71 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Московско муле</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Salty Dog</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Солти Дог</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Sea Breeze</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Сий Бриз</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Sex on the Beach</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Секс он дъ Бийч</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Turtle Shell v1</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Търтъл Шел v1</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>White Russian</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Уайт Ръшън</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Old Fashioned</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Олд Фешънд</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Boulevardier</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Булевардиe</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Gold Rush</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Голд Ръш</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Hot Toddy</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Хот Тоди</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>New York Sour</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ню Йорк Сауър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Turtle Shell v2</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Търтъл Шел v2</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Espresso Martini</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Еспресо Мартини</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Martini (Gin or Vodka)</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Мартини (Джин или Водка)</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>White Lady</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Уайт Лейди</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Daiquiri</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Дайкири</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Hurricane</span>
+                                                <span class="text-primary">&euro;8.00 / 15.65 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Хърикейн</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Margarita</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Маргарита</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Cosmopolitan</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Космополитън</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Hairy Naval</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Хеъри Нейвъл</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Kamikaze</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Камикадзе</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Lemon Drop</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Лемън Дроп</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Vodka Martini</span>
+                                                <span class="text-primary">&euro;0.00 / 0.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Водка Мартини</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Manhattan</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Манхатън</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Whiskey Sour</span>
+                                                <span class="text-primary">&euro;4.50 / 8.80 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Уиски Сауър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Cabana Boy</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Кабана Бой</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Appletini</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Апълтини</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Amaretto Sour</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Амарето Сауър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Flaming Vulcano</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Флейминг Вулкано</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Bloody Mary (on request)</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Блъди Мери (по заявка)</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <!-- Whiskey -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Jim Beam</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джим Бийм</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Glenfiddich</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Гленфидик</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Jack Daniels</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джак Даниелс</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Jameson</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джеймисън</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Johnnie Walker</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джони Уокър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Bushmills</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бушмилс</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Teeling Single Malt</span>
+                                                <span class="text-primary">&euro;8.00 / 15.65 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Тийлинг Сингъл Молт</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Jameson Black Barrel</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джеймисън Блек Барел</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Maker’s Mark</span>
+                                                <span class="text-primary">&euro;4.50 / 8.80 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Мейкърс Марк</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gin -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Gin Beefeater</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джин Бийфийтър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Gin Beefeater Pink</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джин Бийфийтър Пинк</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Gin Bombay</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джин Бомбай</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Gin Hendrick’s</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Джин Хендрикс</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tequila -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tequila Gold</span>
+                                                <span class="text-primary">&euro;2.50 / 0.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Текила Голд</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tequila Silver</span>
+                                                <span class="text-primary">&euro;2.50 / 0.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Текила Силвър</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>El Tequileno Blanco</span>
+                                                <span class="text-primary">&euro;3.50 / 6.85 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ел Текилено Бланко</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Tequila El Patron</span>
+                                                <span class="text-primary">&euro;8.00 / 15.65 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Текила Ел Патрон</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rum -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Barcadi Black</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Бакарди Блек</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Barcadi White</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Бакарди Уайт</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Bumbu Cream</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Бумбу Крийм</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Bumbu Original</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Бумбу Ориджинъл</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Captain Morgan Dark</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Капитан Морган Дарк</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Captain Morgan Spiced</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Капитан Морган Спайсд</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Captain Morgan White</span>
+                                                <span class="text-primary">&euro;4.60 / 9.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Капитан Морган Уайт</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Cachaca Rum</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Кашаса</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Overproof 69%</span>
+                                                <span class="text-primary">&euro;3.00 / 0.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Оувърпруф 69%</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rum Stroh 80</span>
+                                                <span class="text-primary">&euro;3.00 / 0.00 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ром Щро 80</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Brandy/Cognac -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Brandy 17 Year</span>
+                                                <span class="text-primary">&euro;5.00 / 9.78 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бренди 17 години</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Brandy VSOP</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бренди VSOP</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Brandy Ararat 3y</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бренди Арарат 3г.</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Cognac Hennessy</span>
+                                                <span class="text-primary">&euro;6.00 / 11.73 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Коняк Хенеси</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Vodka -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Absolut</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Абсолют</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Russian Standard</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ръшън Стандард</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Others -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Aperol</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Аперол</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Baileys</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Бейлис</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Liquor Frangelico</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Франджелико</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Liquor Jägermeister</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Йегермайстер</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Menta</span>
+                                                <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Мента</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Amaretto Di Saschira</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Амарето Ди Саскира</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Rakia Sharovitsa</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Ракия Шаровицa</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Fernet Branca</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Фернет Бранка</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Medori Melon Liquor</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Медори Мелон</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Vermouth -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Vermout Karpano</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Вермут Карпано</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Vermout Kuchelo</span>
+                                                <span class="text-primary">&euro;4.00 / 7.82 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Вермут Кучело</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Vermout Torino</span>
+                                                <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Вермут Торино</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>Martini Extra Dry (Vermouth)</span>
+                                                <span class="text-primary">&euro;3.00 / 5.87 лв.</span>
+                                            </h5>
+                                            <small class="fst-italic">Мартини Екстра Драй (Вермут)</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <!-- Soft Drinks -->
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Red Bull</span>
+        <span class="text-primary">&euro;2.00 / 3.91 лв.</span>
+      </h5>
+      <small class="fst-italic">Ред Бул / 250ml</small>
     </div>
   </div>
+</div>
 
-  <header>
-    <nav class="nav">
-      <div class="wrap">
-        <div class="row">
-          <div class="brand">
-            <img src="img/TheTurtleHouse-Logo-Icon.svg" alt="Turtle House logo" />
-            <div class="word">The Turtle House</div>
-          </div>
-          <div class="spacer"></div>
-          <a class="cta" href="https://www.instagram.com/turtlehouseplovdiv" target="_blank" rel="noopener">Follow Updates</a>
-        </div>
-      </div>
-    </nav>
-
-    <div id="home" class="hero">
-      <div class="wrap">
-        <div class="inner">
-          <span class="kicker">Neighborhood • Sports • Cozy</span>
-          <h1>Where Fans Become Family</h1>
-          <p class="sub">A warm corner in Kapana with screens for the big matches, craft-forward pours, and that slow-and-steady Turtle vibe.</p>
-
-          <div class="actions">
-            <a class="btn" href="#events">See Events</a>
-            <a class="btn alt" href="#visit">Find Us</a>
-          </div>
-           
-        </div>
-      </div>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Bankia Water Still</span>
+        <span class="text-primary">&euro;1.00 / 1.96 лв.</span>
+      </h5>
+      <small class="fst-italic">Банкя Вода Негазирана / 500ml</small>
     </div>
-  </header>
+  </div>
+</div>
 
-  <main>
-    <section class="wrap" aria-labelledby="about">
-      <h2 id="about">A cozy sports bar in the heart of Plovdiv</h2>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Pelisterka Water Mineral</span>
+        <span class="text-primary">&euro;1.00 / 1.96 лв.</span>
+      </h5>
+      <small class="fst-italic">Пелистерка Минерална / 500ml</small>
+    </div>
+  </div>
+</div>
 
-     
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Coca Cola</span>
+        <span class="text-primary">&euro;1.75 / 3.42 лв.</span>
+      </h5>
+      <small class="fst-italic">Кока Кола / 330ml</small>
+    </div>
+  </div>
+</div>
 
-      <div class="gallery">
-        <img src="img/yellowdoor.png" alt="Yellow doors glowing at night" />
-        <img src="img/party.png" alt="Beer being poured" />
-        <img src="img/cheers.png" alt="Cozy bar vibes" />
-      </div>
-    </section>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Coca Cola Zero</span>
+        <span class="text-primary">&euro;1.75 / 3.42 лв.</span>
+      </h5>
+      <small class="fst-italic">Кока Кола Зеро / 330ml</small>
+    </div>
+  </div>
+</div>
 
-    <!-- EVENTS (optional section anchor so buttons don’t break) -->
-    <section id="events" class="wrap" aria-labelledby="events-h">
-      <h2 id="events-h">Events</h2>
-      <div class="block">
-        <p class="small" style="margin:0;opacity:.92">Schedule posted on Instagram. DM to request a match.</p>
-      </div>
-    </section>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Fanta</span>
+        <span class="text-primary">&euro;1.75 / 3.42 лв.</span>
+      </h5>
+      <small class="fst-italic">Фанта / 330ml</small>
+    </div>
+  </div>
+</div>
 
-    <section id="visit" class="wrap" aria-labelledby="visit-h">
-      <h2 id="visit-h">Visit</h2>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Sprite</span>
+        <span class="text-primary">&euro;1.75 / 3.42 лв.</span>
+      </h5>
+      <small class="fst-italic">Спрайт / 330ml</small>
+    </div>
+  </div>
+</div>
 
-      <div class="visit-grid">
-        <div class="block">
-          <p style="margin-top:0"><strong>Address:</strong> Св. Климент 7, Пловдив (Kapana)</p>
-          <p><strong>Hours:</strong> 4PM – 11PM</p>
-          <p><strong>Contact:</strong> <a href="mailto:team@turtlehousebg.com">team@turtlehousebg.com</a> · <a href="tel:+359877221197">+359 87 722 1197</a></p>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Schweppes Tonic</span>
+        <span class="text-primary">&euro;1.75 / 3.42 лв.</span>
+      </h5>
+      <small class="fst-italic">Швепс Тоник / 250ml</small>
+    </div>
+  </div>
+</div>
 
-          <div class="actions" style="max-width:none;margin-top:12px">
-            <a class="btn" href="https://www.instagram.com/turtlehouseplovdiv/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn alt" href="https://www.google.com/maps/dir/?api=1&destination=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria" target="_blank" rel="noopener">Get Directions</a>
-          </div>
-        </div>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Schweppes Bitter Lime</span>
+        <span class="text-primary">&euro;1.75 / 3.42 лв.</span>
+      </h5>
+      <small class="fst-italic">Швепс Битър Лайм / 250ml</small>
+    </div>
+  </div>
+</div>
 
-        <div class="map" aria-label="Map">
-          <iframe
-            src="https://www.google.com/maps?q=Turtle+House,+ul.+Sveti+Kliment+7,+4000+Plovdiv,+Bulgaria&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="The Turtle House location map"></iframe>
-        </div>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Ginger Beer</span>
+        <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+      </h5>
+      <small class="fst-italic">Джинджър Бийр / 200ml</small>
+    </div>
+  </div>
+</div>
 
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Grapefruit Tonic</span>
+        <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+      </h5>
+      <small class="fst-italic">Грейпфрут Тоник / 200ml</small>
+    </div>
+  </div>
+</div>
 
-        
-      </div>
-    </section>
-  </main>
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Cherry Blossom Tonic</span>
+        <span class="text-primary">&euro;2.80 / 5.48 лв.</span>
+      </h5>
+      <small class="fst-italic">Чери Блосъм Тоник / 200ml</small>
+    </div>
+  </div>
+</div>
 
-  <footer>
-    <div class="wrap">
-      <div class="grid">
-        <div>
-          <div class="brand-mini">
-            <img src="img/TheTurtleHouse-Logo-Icon.svg" alt="Turtle House logo small" />
-            <div>
-              <strong style="color:var(--cream)">The Turtle House</strong><br>
-              <span class="small">© <span id="y">2025</span> · Plovdiv</span>
+<!-- Juices -->
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Pineapple Juice</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Сок Ананас / 250ml</small>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Strawberry/Banana Juice</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Сок Ягода/Банан / 250ml</small>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Apricot Juice</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Сок Кайсия / 250ml</small>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Apple Juice</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Сок Ябълка / 250ml</small>
+    </div>
+  </div>
+</div>
+
+<!-- Hot Drinks -->
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Coffee</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Кафе</small>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Tea</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Чай</small>
+    </div>
+  </div>
+</div>
+
+<!-- Snacks -->
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Peanuts</span>
+        <span class="text-primary">&euro;1.50 / 2.93 лв.</span>
+      </h5>
+      <small class="fst-italic">Фъстъци</small>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Pistachio</span>
+        <span class="text-primary">&euro;2.50 / 4.89 лв.</span>
+      </h5>
+      <small class="fst-italic">Шамфъстък</small>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <div class="d-flex align-items-center">
+    <div class="w-100 d-flex flex-column text-start ps-4">
+      <h5 class="d-flex justify-content-between border-bottom pb-2">
+        <span>Pringles</span>
+        <span class="text-primary">&euro;2.00 / 3.91 лв.</span>
+      </h5>
+      <small class="fst-italic">Прингълс</small>
+    </div>
+  </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="small">
-          “Where fans become family.”<br>
-          Kapana District
-        </div>
-      </div>
-    </div>
-  </footer>
+        <!-- Menu End -->
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+        <!-- Team Start 
+        <div class="container-xxl pt-5 pb-3">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
+                    <h1 class="mb-5">Good games, better company</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       Team End -->
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+                    <h1 class="mb-5">Our Clients Say!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Place is incredible, amazing tequila. Cocktails were awesome. Brought my own card games. Would recommend. Also Saturday girls night discount, whoop</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar">A</div>
+                            <div class="ps-3">
+                                <h5 class="mb-1">Andrew Wilkinson</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>We called in this place as it was round the corner from our hotel. What a quirky place. Showed all the sports we wanted to see and had a good selection of local beers.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar">C</div>
+                            <div class="ps-3">
+                                <h5 class="mb-1">Colin Davenport</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Really nice bar, Harald the owner is a top guy. Only bar snacks but good bar snacks! Nice atmosphere with nice locals, sports on TV but without commentary which for me is preferable, its nicer to talk at the bar and watch! English spoken here</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar">R</div>
+                            <div class="ps-3">
+                                <h5 class="mb-1">Richard Hutley</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>The new decor is great. It’s a perfect place to watch football and have a beer.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar">T</div>
+                            <div class="ps-3">
+                                <h5 class="mb-1">Tolga Kaya</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Св. Климент 7, Пловдив (Kapana)</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+359 87 722 1197</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>team@turtlehousebg.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/turtlehouseplovdiv/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61584712465618"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
+                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                        <p>4PM - 11PM</p>
+                        <h5 class="text-light fw-normal">Sunday</h5>
+                        <p>4PM - 11PM</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">The Turtle House 2026</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                            Distributed By <a class="border-bottom" href="https://themewagon.com"
+                                target="_blank">ThemeWagon</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
