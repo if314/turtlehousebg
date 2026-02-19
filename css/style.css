@@ -1,4 +1,16 @@
+
+.reviews-embed {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reviews-embed iframe,
+.reviews-embed > div {
+  width: 100% !important;
+}
+
 /********** Template CSS **********/
+
 :root {
     --primary: #FEA116;
     --light: #F1F8FF;
