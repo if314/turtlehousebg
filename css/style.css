@@ -9,6 +9,9 @@
   width: 100% !important;
 }
 
+.text-muted {
+    color: #c4b9a8 !important;
+}
 /********** Template CSS **********/
 
 :root {
