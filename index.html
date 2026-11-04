@@ -38,6 +38,14 @@
             background-color: #26322D !important;
         }
     </style>
+
+    <style>
+        .surprise-wheel-wrap { width: min(100%, 470px); position: relative; padding: 12px; }
+        #surprise-wheel { display: block; width: 100%; height: auto; border-radius: 50%; filter: drop-shadow(0 10px 15px rgba(0,0,0,.18)); }
+        .surprise-pointer { position: absolute; z-index: 2; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 30px solid #26322d; }
+        #surprise-spin:disabled { opacity: .65; cursor: wait; }
+        #surprise-result { min-height: 2em; color: #26322d; }
+    </style>
 </head>
 
 <body>
@@ -188,7 +196,24 @@
         </div>
         <!-- About End -->
 
-     <!-- Menu Start -->
+     
+        <!-- Surprise Me Wheel Start -->
+        <section class="container-xxl py-5" id="surprise-me" aria-labelledby="surprise-title">
+            <div class="container text-center">
+                <h5 class="section-title ff-secondary text-primary fw-normal">Feeling lucky?</h5>
+                <h1 id="surprise-title" class="mb-3">Not sure what you want?</h1>
+                <p class="mb-4">Let the wheel choose your next drink.</p>
+                <div class="surprise-wheel-wrap mx-auto">
+                    <div class="surprise-pointer" aria-hidden="true"></div>
+                    <canvas id="surprise-wheel" width="640" height="640" role="img" aria-label="Wheel of drinks"></canvas>
+                </div>
+                <button id="surprise-spin" type="button" class="btn btn-primary py-3 px-5 mt-4">Surprise Me!</button>
+                <p id="surprise-result" class="h4 mt-4 mb-0" role="status" aria-live="polite">Ready to spin?</p>
+            </div>
+        </section>
+        <!-- Surprise Me Wheel End -->
+
+        <!-- Menu Start -->
         <div class="container-xxl py-5" id="menu">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -1902,6 +1927,83 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+    (() => {
+        const wheel = document.getElementById('surprise-wheel');
+        const button = document.getElementById('surprise-spin');
+        const result = document.getElementById('surprise-result');
+        if (!wheel || !button || !result) return;
+        const ctx = wheel.getContext('2d');
+        if (!ctx) return;
+
+        // Read the current menu so future edits to drinks automatically update the wheel.
+        const getItems = (selector) => Array.from(document.querySelectorAll(selector))
+            .map(node => node.textContent.trim()).filter(Boolean);
+        const beerRows = Array.from(document.querySelectorAll('#tab-1 .col-lg-6'))
+            .filter(row => !/wine|prosecco/i.test(row.querySelector('h5 span')?.textContent || ''));
+        const beers = beerRows.map(row => {
+            const name = row.querySelector('h5 span')?.textContent.trim() || '';
+            const detail = row.querySelector('small')?.textContent || '';
+            const size = detail.match(/\b(300|330|440|500)\s*ml\b/i)?.[0] || '';
+            return [name, size].filter(Boolean).join(' ');
+        }).filter(Boolean);
+        const cocktails = getItems('#tab-2 .col-lg-6 h5 span:first-child').slice(0, 12);
+        const shots = getItems('#tab-2 .col-lg-6 h5 span:first-child').slice(12, 15);
+        const drinks = [...cocktails, ...beers, ...shots];
+        if (!drinks.length) { result.textContent = 'No drinks found in the menu.'; button.disabled = true; return; }
+
+        const colors = ['#26322d', '#d6a34a', '#476a57', '#b56e45', '#365d64', '#8a7448'];
+        const TAU = Math.PI * 2;
+        const step = TAU / drinks.length;
+        let rotation = 0;
+        let spinning = false;
+        function draw() {
+            const cx = 320, cy = 320, radius = 302;
+            ctx.clearRect(0, 0, 640, 640);
+            drinks.forEach((drink, i) => {
+                const start = rotation + i * step - Math.PI / 2;
+                ctx.beginPath(); ctx.moveTo(cx, cy);
+                ctx.arc(cx, cy, radius, start, start + step);
+                ctx.closePath(); ctx.fillStyle = colors[i % colors.length]; ctx.fill();
+                ctx.strokeStyle = '#fff9'; ctx.lineWidth = 1.5; ctx.stroke();
+                ctx.save(); ctx.translate(cx, cy); ctx.rotate(start + step / 2);
+                ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+                ctx.fillStyle = '#fff'; ctx.font = 'bold 12px Nunito, sans-serif';
+                const label = drink.length > 24 ? drink.slice(0, 22) + '…' : drink;
+                ctx.fillText(label, radius - 12, 0, radius * .62);
+                ctx.restore();
+            });
+            ctx.beginPath(); ctx.arc(cx, cy, 33, 0, TAU);
+            ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = '#26322d'; ctx.lineWidth = 5; ctx.stroke();
+            ctx.fillStyle = '#26322d'; ctx.font = 'bold 20px Nunito, sans-serif';
+            ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('TH', cx, cy);
+        }
+        draw();
+        button.addEventListener('click', () => {
+            if (spinning) return;
+            spinning = true; button.disabled = true; result.textContent = 'Spinning…';
+            const selected = Math.floor(Math.random() * drinks.length);
+            // The fixed pointer is at 12 o'clock; land at the center of the selected slice.
+            const targetMod = ((-(selected + .5) * step) % TAU + TAU) % TAU;
+            const currentMod = ((rotation % TAU) + TAU) % TAU;
+            const delta = ((targetMod - currentMod) % TAU + TAU) % TAU;
+            const startRotation = rotation;
+            const endRotation = rotation + 5 * TAU + delta;
+            const startTime = performance.now();
+            function frame(now) {
+                const t = Math.min((now - startTime) / 3000, 1);
+                const ease = 1 - Math.pow(1 - t, 4);
+                rotation = startRotation + (endRotation - startRotation) * ease;
+                draw();
+                if (t < 1) requestAnimationFrame(frame);
+                else { rotation = endRotation % TAU; spinning = false; button.disabled = false;
+                    result.textContent = 'Your drink: ' + drinks[selected] + '!'; }
+            }
+            requestAnimationFrame(frame);
+        });
+    })();
+    </script>
 </body>
 
 </html>
