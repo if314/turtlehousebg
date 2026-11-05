@@ -1985,7 +1985,7 @@
         }).filter(Boolean);
         const cocktails = getItems('#tab-2 .col-lg-6 h5 span:first-child').slice(0, 12);
         const shots = getItems('#tab-2 .col-lg-6 h5 span:first-child').slice(12, 15);
-        const drinks = [...cocktails, ...beers, ...shots];
+        const drinks = [...cocktails];
         if (!drinks.length) { result.textContent = 'No drinks found in the menu.'; button.disabled = true; return; }
 
         const colors = ['#26322d', '#355342', '#4d7354', '#71915f', '#b89a55', '#d0b56f'];
