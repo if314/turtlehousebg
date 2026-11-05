@@ -44,7 +44,9 @@
         #surprise-wheel { display: block; width: 100%; height: auto; border-radius: 50%; filter: drop-shadow(0 10px 15px rgba(0,0,0,.18)); }
         .surprise-pointer { position: absolute; z-index: 2; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 30px solid #26322d; }
         #surprise-spin:disabled { opacity: .65; cursor: wait; }
-        #surprise-result { min-height: 2em; color: #26322d; }
+        #surprise-result { min-height: 2em; color: #26322d; font-size: 1.5rem; font-weight: 800; transition: all .2s ease; }
+        #surprise-result.has-result { display: table; margin-left: auto; margin-right: auto; padding: 18px 32px; border: 3px solid #71915f; border-radius: 16px; background: #26322d; color: #fff; font-size: clamp(1.6rem, 4vw, 2.5rem); box-shadow: 0 10px 28px rgba(38,50,45,.22); }
+        #surprise-me { background: #f6f8f4; }
     </style>
 </head>
 
@@ -197,21 +199,7 @@
         <!-- About End -->
 
      
-        <!-- Surprise Me Wheel Start -->
-        <section class="container-xxl py-5" id="surprise-me" aria-labelledby="surprise-title">
-            <div class="container text-center">
-                <h5 class="section-title ff-secondary text-primary fw-normal">Feeling lucky?</h5>
-                <h1 id="surprise-title" class="mb-3">Not sure what you want?</h1>
-                <p class="mb-4">Let the wheel choose your next drink.</p>
-                <div class="surprise-wheel-wrap mx-auto">
-                    <div class="surprise-pointer" aria-hidden="true"></div>
-                    <canvas id="surprise-wheel" width="640" height="640" role="img" aria-label="Wheel of drinks"></canvas>
-                </div>
-                <button id="surprise-spin" type="button" class="btn btn-primary py-3 px-5 mt-4">Surprise Me!</button>
-                <p id="surprise-result" class="h4 mt-4 mb-0" role="status" aria-live="polite">Ready to spin?</p>
-            </div>
-        </section>
-        <!-- Surprise Me Wheel End -->
+
 
         <!-- Menu Start -->
         <div class="container-xxl py-5" id="menu">
@@ -1714,6 +1702,22 @@
         </div>
         <!-- Menu End -->
 
+        <!-- Surprise Me Wheel Start -->
+        <section class="container-xxl py-5" id="surprise-me" aria-labelledby="surprise-title">
+            <div class="container text-center">
+                <h5 class="section-title ff-secondary text-primary fw-normal">Feeling lucky?</h5>
+                <h1 id="surprise-title" class="mb-3">Can't Decide?</h1>
+                <p class="mb-4">Let the wheel choose your next drink.</p>
+                <div class="surprise-wheel-wrap mx-auto">
+                    <div class="surprise-pointer" aria-hidden="true"></div>
+                    <canvas id="surprise-wheel" width="640" height="640" role="img" aria-label="Wheel of drinks"></canvas>
+                </div>
+                <button id="surprise-spin" type="button" class="btn btn-primary py-3 px-5 mt-4">Surprise Me!</button>
+                <p id="surprise-result" class="h4 mt-4 mb-0" role="status" aria-live="polite">Ready to spin?</p>
+            </div>
+        </section>
+        <!-- Surprise Me Wheel End -->
+
         <!-- Team Start 
         <div class="container-xxl pt-5 pb-3">
             <div class="container">
@@ -1953,7 +1957,7 @@
         const drinks = [...cocktails, ...beers, ...shots];
         if (!drinks.length) { result.textContent = 'No drinks found in the menu.'; button.disabled = true; return; }
 
-        const colors = ['#26322d', '#d6a34a', '#476a57', '#b56e45', '#365d64', '#8a7448'];
+        const colors = ['#26322d', '#355342', '#4d7354', '#71915f', '#b89a55', '#d0b56f'];
         const TAU = Math.PI * 2;
         const step = TAU / drinks.length;
         let rotation = 0;
@@ -1982,7 +1986,7 @@
         draw();
         button.addEventListener('click', () => {
             if (spinning) return;
-            spinning = true; button.disabled = true; result.textContent = 'Spinning…';
+            spinning = true; button.disabled = true; result.classList.remove('has-result'); result.textContent = 'Spinning…';
             const selected = Math.floor(Math.random() * drinks.length);
             // The fixed pointer is at 12 o'clock; land at the center of the selected slice.
             const targetMod = ((-(selected + .5) * step) % TAU + TAU) % TAU;
@@ -1998,7 +2002,7 @@
                 draw();
                 if (t < 1) requestAnimationFrame(frame);
                 else { rotation = endRotation % TAU; spinning = false; button.disabled = false;
-                    result.textContent = 'Your drink: ' + drinks[selected] + '!'; }
+                    result.textContent = drinks[selected]; result.classList.add('has-result'); }
             }
             requestAnimationFrame(frame);
         });
