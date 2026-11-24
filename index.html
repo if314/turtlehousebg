@@ -92,6 +92,84 @@
 
 
         <!-- Navbar & Hero Start -->
+         <!-- Events Start -->
+<section class="container-xxl py-5" id="events">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="section-title ff-secondary text-primary fw-normal">
+                What's On
+            </h5>
+            <h1 class="mb-5">Upcoming Events</h1>
+        </div>
+        <div id="facebook-events" class="row g-4"></div>
+    </div>
+</section>
+
+<script>
+fetch('events.json', { cache: 'no-store' })
+    .then(response => {
+        if (!response.ok) throw new Error('Unable to load events');
+        return response.json();
+    })
+    .then(result => {
+        const container = document.getElementById('facebook-events');
+
+        const events = result.data
+            .filter(event => new Date(event.end_time || event.start_time) > new Date())
+            .sort((a, b) => new Date(a.start_time) - new Date(b.start_time));
+
+        if (!events.length) {
+            container.textContent = 'More events coming soon!';
+            return;
+        }
+
+        events.forEach(event => {
+            const card = document.createElement('div');
+            card.className = 'col-lg-4 col-md-6';
+
+            card.innerHTML = `
+                <div class="card h-100 shadow-sm border-0">
+                    <img class="card-img-top" style="aspect-ratio:16/9;object-fit:cover;" alt="">
+                    <div class="card-body">
+                        <p class="text-primary fw-bold"></p>
+                        <h5 class="card-title"></h5>
+                        <a class="btn btn-primary mt-3" target="_blank" rel="noopener">
+                            Event Details
+                        </a>
+                    </div>
+                </div>`;
+
+            const image = card.querySelector('img');
+            if (event.cover?.source) {
+                image.src = event.cover.source;
+                image.alt = event.name;
+            } else {
+                image.remove();
+            }
+
+            card.querySelector('p').textContent =
+                new Date(event.start_time).toLocaleString('en-GB', {
+                    timeZone: 'Europe/Sofia',
+                    weekday: 'short',
+                    day: 'numeric',
+                    month: 'short',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+
+            card.querySelector('h5').textContent = event.name;
+            card.querySelector('a').href =
+                'https://www.facebook.com/events/' + encodeURIComponent(event.id);
+
+            container.appendChild(card);
+        });
+    })
+    .catch(() => {
+        document.getElementById('facebook-events').textContent =
+            'Events are temporarily unavailable.';
+    });
+</script>
+<!-- Events End -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
@@ -104,6 +182,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#events" class="nav-item nav-link">Events</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#menu" class="nav-item nav-link">Menu</a>
                         <a href="#surprise-me" class="nav-item nav-link">Can't Decide?</a>
@@ -132,8 +211,8 @@
         <!-- Navbar & Hero End -->
 
 
-        <!-- Service Start -->
-        <div class="container-xxl py-5" id="#about">
+        <!-- Service Start 
+        <div class="container-xxl py-5" id="#">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -183,7 +262,7 @@
                 </div>
             </div>
         </div>
-        <!-- Service End -->
+         Service End -->
 
 
         <!-- About Start -->
