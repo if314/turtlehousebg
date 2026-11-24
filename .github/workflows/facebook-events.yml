@@ -1,0 +1,33 @@
+name: Fetch Facebook Events
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-events:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Facebook events
+        env:
+          FB_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+        run: |
+          curl --fail --silent --show-error \
+            -H "Authorization: Bearer $FB_TOKEN" \
+            "https://graph.facebook.com/v27.0/870552169479037/events?fields=id,name,start_time,end_time,description,cover" \
+            -o events.json
+
+      - name: Save events
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add events.json
+          git diff --cached --quiet || git commit -m "Update Facebook events"
+          git push
