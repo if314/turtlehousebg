@@ -133,9 +133,516 @@
       "updateTime": "2026-11-08T17:47:18.389916Z",
       "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmvSlBbGbKd2ed7L-QvQdebJrIAGOtGXICmBmychlU4EsUj8_AYJdLIWkEqVCRQW-FE1NijkQ",
       "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT20xUlkxQmZabTFrVjJkZlFVRkZUM1p2Um5BdFRsRRAB"
+    },
+    {
+      "reviewId": "AbFvOqmUcNyzynaSxHuvfGh_Lou6G3l47hiIELGqc3pvoJxk2rMQGB3u-DdJ5oNfCjtAWlvI-IqM",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocI3MnMai6iKRLMS2DawHk3iwohbKK1ct4NB7Saabn5LYQZWyg=s120-c-rp-mo-ba12-br100",
+        "displayName": "Jack Coop"
+      },
+      "starRating": "FIVE",
+      "comment": "In spite of watching the team I love lose, the bar is a great place: good drinks, great staff, friendly locals. Big recommend!",
+      "createTime": "2026-11-04T19:40:21.223998Z",
+      "updateTime": "2026-11-04T19:40:21.223998Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmUcNyzynaSxHuvfGh_Lou6G3l47hiIELGqc3pvoJxk2rMQGB3u-DdJ5oNfCjtAWlvI-IqM",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT200NWF6RkROemRCYVhscFgzbHFXRUY1TTNOT1RuYxAB"
+    },
+    {
+      "reviewId": "AbFvOqmkqzdC2XCr9AH7o6y9CIKiCyjX7JR9wNjqeO-OBZ5YJbiXU7p3X8UPIBIwYjonlvSjn6U8rg",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ4R28IqdjmKS_SpT8o361FjDsuAVcuKSTo7BKdwPkftItr7g=s120-c-rp-mo-br100",
+        "displayName": "Samuel Steiner"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-11-04T19:36:42.753495Z",
+      "updateTime": "2026-11-04T19:36:42.753495Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmkqzdC2XCr9AH7o6y9CIKiCyjX7JR9wNjqeO-OBZ5YJbiXU7p3X8UPIBIwYjonlvSjn6U8rg",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pCVlZubzFSbTVIYmw5MmJFaFhjM0ZCV21RMVRYYxAB"
+    },
+    {
+      "reviewId": "AbFvOqlB_GHI5m7CcWpuk5GmQM_OmTkJeSZlJw7JAc-xb58IX3LEfGSAGbjYLQkvQY8hn8QWQYU_1A",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJvwMnHAuZJandt5AaynPS0im35nbh9e7oQlm3SqvBfeViTtQ=s120-c-rp-mo-br100",
+        "displayName": "Enrico Galvalisi"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-10-31T22:00:56.705406Z",
+      "updateTime": "2026-10-31T22:00:56.705406Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqlB_GHI5m7CcWpuk5GmQM_OmTkJeSZlJw7JAc-xb58IX3LEfGSAGbjYLQkvQY8hn8QWQYU_1A",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21wUVVWZDJhMGhMZUc1WlMxUnBUbEJ3TVVweFVFRRAB"
+    },
+    {
+      "reviewId": "AbFvOqnvkDzDog1xcDLL_I2LMS66eCXchS53rFcRcsyc_enSaB8fvP51vs4e8ARA0FccKwmlF0I6eQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIQHBDbgDo8QvDDyiI2TwE-lH8AQTKE9fsXd0KT8rlGFcDV8w=s120-c-rp-mo-br100",
+        "displayName": "Noah Yerby"
+      },
+      "starRating": "FIVE",
+      "comment": "Top pub with a great atmosphere, very nice selection of boozes and brilliant staff. Definitely will be back 👍🏼",
+      "createTime": "2026-10-27T20:42:04.506347Z",
+      "updateTime": "2026-10-27T20:42:04.506347Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnvkDzDog1xcDLL_I2LMS66eCXchS53rFcRcsyc_enSaB8fvP51vs4e8ARA0FccKwmlF0I6eQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2podE1FSTVlSHB2UkVwSVNqRldTREF0WHpOYVNtYxAB"
+    },
+    {
+      "reviewId": "AbFvOqkTuai0X4f1toBTEfFsfRwGFBBktJ99Sy6-PPc8OvoHtC40JWFlph0VphIr6bX_J7KHjMlgZQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJZHvGkfW5YU7iaQNzJqUIdnMIwWBvxoSCM8WvSY93UVBenNg=s120-c-rp-mo-ba12-br100",
+        "displayName": "Vivian Vasileva"
+      },
+      "starRating": "FIVE",
+      "comment": "Great bar in the center of Plovdiv, the atmosphere was great. We are definetly coming back again, it was cozy and I could see it becoming one of our regular spots. Love the turtle theme.🐢Great tequila 😉",
+      "createTime": "2026-10-25T17:56:25.943011Z",
+      "updateTime": "2026-10-25T17:56:25.943011Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkTuai0X4f1toBTEfFsfRwGFBBktJ99Sy6-PPc8OvoHtC40JWFlph0VphIr6bX_J7KHjMlgZQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25wTVExTnNVVmxRYlZVNU5HTXdkamRxWWpGaVdFRRAB"
+    },
+    {
+      "reviewId": "AbFvOqknIIEarbltaHLFZ1sOSZV01qshAkoYDCDt3h7nKJl7m-NHz_0t2c0Wd65wb00JP7VZOH2sMA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX_IyHGrruCbwiwIRe7RhbeICl-8HtgykVOKH4t6m6plLOQ4c5a=s120-c-rp-mo-ba12-br100",
+        "displayName": "Jason Castello"
+      },
+      "starRating": "FIVE",
+      "comment": "Great expats bar, great beer, friendly staff, definitely recommend",
+      "createTime": "2026-10-24T19:03:44.323855Z",
+      "updateTime": "2026-10-24T19:03:44.323855Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqknIIEarbltaHLFZ1sOSZV01qshAkoYDCDt3h7nKJl7m-NHz_0t2c0Wd65wb00JP7VZOH2sMA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2twS1JGcFFObmMxVGs4eVdGUjRjR1U0V0V4d1RHYxAB"
+    },
+    {
+      "reviewId": "AbFvOqk9c5ZanrIgCOv-w8pvifdfRqMjvwvUpqHbmkPtKiX8QIYfhNkBq8qnPrykB0Tuwk1ubuyofA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIXaW4hd6U6wdzkxrIajn42amoT8fLJIVwYZt9kCQcWgmkjcw=s120-c-rp-mo-ba12-br100",
+        "displayName": "Amdudaxd"
+      },
+      "starRating": "FIVE",
+      "comment": "(Translated by Google) Great place with a nice atmosphere, excellent service and really good prices! 🍸🥃 The alcohol is of good quality, the drinks are well selected, and the price-quality ratio is more than excellent. It is obvious that they are committed to good service and that customers leave satisfied. An ideal place for both meetings with friends and a pleasant evening with a good drink. It is definitely worth a visit and I would gladly come back again! I recommend it with both hands! ⭐⭐⭐⭐⭐\n\n(Original)\nСтрахотно място с приятна атмосфера, отлично обслужване и наистина добри цени! 🍸🥃 Алкохолът е качествен, напитките са добре подбрани, а съотношението между цена и качество е повече от отлично. Личи си, че се държи на доброто обслужване и на това клиентите да си тръгват доволни. Идеално място както за срещи с приятели, така и за приятна вечер с хубаво питие. Определено си заслужава да се посети и с удоволствие бих се върнал отново! Препоръчвам с две ръце! ⭐⭐⭐⭐⭐",
+      "createTime": "2026-10-21T20:05:00.417411Z",
+      "updateTime": "2026-10-21T20:05:00.417411Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqk9c5ZanrIgCOv-w8pvifdfRqMjvwvUpqHbmkPtKiX8QIYfhNkBq8qnPrykB0Tuwk1ubuyofA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21keWJFdFNiMmh4VVhnMWFFTkxVRVZ0VnpSc1oyYxAB"
+    },
+    {
+      "reviewId": "AbFvOqnttqLKkjeIFU5_gAI0VunRpBXIN8zJLp7-QhLv6OtCwb1xWcTZC1r65krhzn8Wd62yYBgQ4Q",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUmSLrLvbewc6SpPF6KrRqxWQUyI4iS-Bnqyxb-21FXrqVrXeuT=s120-c-rp-mo-ba12-br100",
+        "displayName": "Ian Walker-Campbell"
+      },
+      "starRating": "FIVE",
+      "comment": "A great bar to meet fellow travellers from all over the world and the best okaceto watch Sports in the city, and willing to show more obscure ones. It's also just a few minutes from the main pedestrian street. Friendly staff, good prices and highly recommended . Also had a pool table upstairs.",
+      "createTime": "2026-09-29T19:07:27.834292Z",
+      "updateTime": "2026-09-29T19:28:35.813518Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnttqLKkjeIFU5_gAI0VunRpBXIN8zJLp7-QhLv6OtCwb1xWcTZC1r65krhzn8Wd62yYBgQ4Q",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tWcVJFcG1jbkJOY25aSlFscHJSbnA0V1ZGRWRuYxAB"
+    },
+    {
+      "reviewId": "AbFvOqn59eaCorZOVLEbn31yauZ6_FPsrZedrkIbhkvM9vn-D7xUgXpHrJ5e9J5kIiOgDdTlbbdKVg",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVeVqTFPj3NSmvrcm7PIMP-OAmMpHPj2w6hKoKLklxwYHpbaJqc=s120-c-rp-mo-ba12-br100",
+        "displayName": "Kristiyan Bitsin"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-09-07T21:38:16.371898Z",
+      "updateTime": "2026-09-07T21:38:16.371898Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqn59eaCorZOVLEbn31yauZ6_FPsrZedrkIbhkvM9vn-D7xUgXpHrJ5e9J5kIiOgDdTlbbdKVg",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25sTGFscFpibE13WHpZNFUyNVRZbVZQTTNOcFptYxAB"
+    },
+    {
+      "reviewId": "AbFvOql8ZRht9djxbdZT3E9xC3QvqCOgcWj_ElD9Xgd318jq2m3vksZjaTpjYyF0C23JluQABuY5dA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJnVQS8BfNaVcN9zaoEsv_v_cBj4h9EykRKQvKlfTfWr7qLzA=s120-c-rp-mo-ba12-br100",
+        "displayName": "Hristo Paskalev"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-09-06T15:00:33.476438Z",
+      "updateTime": "2026-09-06T15:00:33.476438Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOql8ZRht9djxbdZT3E9xC3QvqCOgcWj_ElD9Xgd318jq2m3vksZjaTpjYyF0C23JluQABuY5dA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25GVFdqaEhlWFp0TTFsbVIybDRYMnQxZDJOVWEyYxAB"
+    },
+    {
+      "reviewId": "AbFvOqkRqoES_I_jy-tVGrrr9tax1ED-4GnTQyVE3JTLxgcx1_4HITDO2QnORWnSODkyw2ofgFJO",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVecx8S-AAKzf6gdXGMyO5f8caXDg_i8yGoPtHY2Xvm-e8FdXgB=s120-c-rp-mo-br100",
+        "displayName": "Svetoslav Pavlov"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-09-05T21:14:56.187511Z",
+      "updateTime": "2026-09-05T21:14:56.187511Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkRqoES_I_jy-tVGrrr9tax1ED-4GnTQyVE3JTLxgcx1_4HITDO2QnORWnSODkyw2ofgFJO",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pOWE0ybDBXSEpCYjFOQmJrNTFaM0JZZGxZemQyYxAB"
+    },
+    {
+      "reviewId": "AbFvOqnkuswmgbY3uxCDKXq_y2JTDx5rx91wwlnEBqbUZBfvXq7MNd3ythQqqOM36D1eAA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJbWzvnEGO3MjegRvZ4r01PaMUgLjQm4M8TKiJzf-JApeIsIg=s120-c-rp-mo-br100",
+        "displayName": "Kajetan Juzyszyn"
+      },
+      "starRating": "FIVE",
+      "comment": "The best place in plovdiv to watch a match and drink some beer. Highly recommend to visit this place. Super nice people and the best atmosphere.",
+      "createTime": "2026-09-04T19:35:23.000352Z",
+      "updateTime": "2026-09-04T19:35:23.000352Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnkuswmgbY3uxCDKXq_y2JTDx5rx91wwlnEBqbUZBfvXq7MNd3ythQqqOM36D1eAA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSZlgyMXNRbGt6VWtneVl6Qm9lV1JFVlhGd1NrRRAB"
+    },
+    {
+      "reviewId": "AbFvOqmdva9Dl3RMFrcK4Yo2r_NdpTI0ImvmetO_Uw3QTcHJl649juPCxr1ZdtcqESKl6yIsBpOf",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUfvo1jxSVjahX2JolIWDkTDxYEXov5LXkAdd0nfwteWejTncA=s120-c-rp-mo-br100",
+        "displayName": "PatryQ"
+      },
+      "starRating": "FIVE",
+      "comment": "I think the best place in Plovdiv to watch football match with friends 🍻",
+      "createTime": "2026-09-04T19:34:44.020328Z",
+      "updateTime": "2026-09-04T19:34:44.020328Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmdva9Dl3RMFrcK4Yo2r_NdpTI0ImvmetO_Uw3QTcHJl649juPCxr1ZdtcqESKl6yIsBpOf",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xwdFRWOVZPRzA1VTJzNFNIUjJXVlZ0VFRGb1dVRRAB"
+    },
+    {
+      "reviewId": "AbFvOqmgMiDMuj-OUXiBTmECfUF51BT07nB2FrR-fLY_JZLXpiJNyI-emjFZbtqiRv6wYL8kU7YIiQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJsdI3Yfh7_t-eaTP74isS89XcmzOpVxDiKoaK4q6GqGwAA5xY=s120-c-rp-mo-br100",
+        "displayName": "Kristina Mileva"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-09-04T18:31:27.287725Z",
+      "updateTime": "2026-09-04T18:31:27.287725Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmgMiDMuj-OUXiBTmECfUF51BT07nB2FrR-fLY_JZLXpiJNyI-emjFZbtqiRv6wYL8kU7YIiQ",
+      "reviewMediaItems": [
+        {
+          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLck4KmEb7zXWyplZUIuxoHmm2zzBDw8Q06IcXwJE6katT7XCV19bOS-GrWHArFUD_L47b9Hr4BFBEnd0jmI_M_PNZWOMOXWrekCXDXERHu8vxp5Z4D2zoZxBJdRLVDwXArymXHCMY8mhTa0=k-no"
+        }
+      ],
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pWeGJGaG9ibkJmTkU1Sk5tbDJZakpyTkVFeFZFRRAB"
+    },
+    {
+      "reviewId": "AbFvOqkMJTzQdZ4K9j8dV0L_XwyuR80wylXIpRFA7T51Vap15uxJguRidWSC89ig2qMgICIEtyuk",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKEJT_hx1Yq7AwaZcvd2J5P7EsS3eAM0Evpk6FUm3Y5RdCVUg=s120-c-rp-mo-br100",
+        "displayName": "James"
+      },
+      "starRating": "FIVE",
+      "comment": "Best tequila in town",
+      "createTime": "2026-08-22T13:59:22.073637Z",
+      "updateTime": "2026-08-22T13:59:22.073637Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkMJTzQdZ4K9j8dV0L_XwyuR80wylXIpRFA7T51Vap15uxJguRidWSC89ig2qMgICIEtyuk",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tsU1ExZEZUR2RLTkdGdVJsRXlXR1ZTVVhoRk4yYxAB"
+    },
+    {
+      "reviewId": "AbFvOqkKClz-SUk9T2uEgzJFYyD_xVVDrfZ3hdvtCJb8NAWc7plHdHl-eN7t9wbw5HF-ZiX_kWKTrg",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKyfH7WUDLcCGo5Ccro-QrHM2QEih_HPxNLTHZXQPeT5hH_VA=s120-c-rp-mo-br100",
+        "displayName": "Will Pennington"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-08-21T19:27:36.983098Z",
+      "updateTime": "2026-08-21T19:27:36.983098Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkKClz-SUk9T2uEgzJFYyD_xVVDrfZ3hdvtCJb8NAWc7plHdHl-eN7t9wbw5HF-ZiX_kWKTrg",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pndFNUTkRjMlZUZG1kNVNsQmhUMnRmYm05NGRrRRAB"
+    },
+    {
+      "reviewId": "AbFvOqnDVlDK2a9IenfCr6KIaRN9WHJlA94_2KpeSYsUn2r-VD0fjpGyJtfve7zb8rvhZxbrb2qw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJwmHSZHa5fNfWYGo8avy2naZEOe6PsP61YvdaBW9vwX0bucaUR=s120-c-rp-mo-br100",
+        "displayName": "Emilio Mora"
+      },
+      "starRating": "FIVE",
+      "comment": "Great staff and beer!",
+      "createTime": "2026-08-17T19:18:38.042407Z",
+      "updateTime": "2026-08-17T19:18:38.042407Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnDVlDK2a9IenfCr6KIaRN9WHJlA94_2KpeSYsUn2r-VD0fjpGyJtfve7zb8rvhZxbrb2qw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tWdWIyRldURVJaU1ROaGVGWnZXQzAyVG10UFRsRRAB"
+    },
+    {
+      "reviewId": "AbFvOqlRxtalpvSDKB8GTCkr4a6gP94r_Ez7wj_pt85jp5r_KBMEp4bc6lLoQc4Pk8_X1pur1vbDpA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWfZnNaGXTn5yCUyxuMjKAiZ3PIZ9LABZyQ_0kLhPoiwrvX55l3=s120-c-rp-mo-br100",
+        "displayName": "a l e j a n d r o"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-08-17T19:17:47.527881Z",
+      "updateTime": "2026-08-17T19:17:47.527881Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqlRxtalpvSDKB8GTCkr4a6gP94r_Ez7wj_pt85jp5r_KBMEp4bc6lLoQc4Pk8_X1pur1vbDpA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21STVVsVm9kRlV5VWxoM1EyVXpSMWhWYWtONlpHYxAB"
+    },
+    {
+      "reviewId": "AbFvOqlp8TIQAnA642d7W09LcNRNt3k0meK5dM1IG_MZ-5eJiv7huILWkH-3SMI4EyyohCukl2kWKw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVGb5FNvPWUTRCpO42_m0AJTyGa3bcMDQ3hJUHeZCCb3wPELhYW=s120-c-rp-mo-ba12-br100",
+        "displayName": "Leonid S"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-08-16T10:19:02.650907Z",
+      "updateTime": "2026-08-16T10:19:02.650907Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqlp8TIQAnA642d7W09LcNRNt3k0meK5dM1IG_MZ-5eJiv7huILWkH-3SMI4EyyohCukl2kWKw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25SYVRGZERlSEEwUTNaeVMwdEtjemRUWlhwUmIxRRAB"
+    },
+    {
+      "reviewId": "AbFvOql2nI1VW8Z4JYu7e64kd9bXrNqAEaPXGbddq47C8ukECOalsKVZbDbFtJFDTh7r6ZTTOlAVYg",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJlvKN-6EUiA6FMKU36oBaR7YY8r3CLFkn1gJ3L_by8UpoI6g=s120-c-rp-mo-br100",
+        "displayName": "Guilhem Temple"
+      },
+      "starRating": "FIVE",
+      "comment": "Nice place for a drink",
+      "createTime": "2026-08-13T16:19:29.748938Z",
+      "updateTime": "2026-08-13T16:19:29.748938Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOql2nI1VW8Z4JYu7e64kd9bXrNqAEaPXGbddq47C8ukECOalsKVZbDbFtJFDTh7r6ZTTOlAVYg",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21NdFYweFBRazFVWkVkUmF6aEpOMGhoV1hSeWMxRRAB"
+    },
+    {
+      "reviewId": "AbFvOqnpM1iH_OZJ_5jank9f0NhH9U1eulr8CXOdy88dgnSxt3Bi0gaC2goVz1_b8iR3doST6tLJEw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIbt8xnpWpt3kZJXfkeX6wi14eKFBxlTGR2Ex37tYcif41O=s120-c-rp-mo-br100",
+        "displayName": "Luke"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-08-12T13:42:40.506983Z",
+      "updateTime": "2026-08-12T13:42:40.506983Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnpM1iH_OZJ_5jank9f0NhH9U1eulr8CXOdy88dgnSxt3Bi0gaC2goVz1_b8iR3doST6tLJEw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSV1JUVkRkME5UVVhKbk1HUjVWeTFDWm5kcGRWRRAB"
+    },
+    {
+      "reviewId": "AbFvOqmMs_4rrq4Se-nP2BYq6N2kDqiWRWV70fLdhVRQQVDb4OayJReqyHm2U0QOAM5TK3Voz2dK",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXL7kmKyree1-ZL1ZcUxHOrxwlxgWdkuicpX3CBGQDOnjE2EARb7w=s120-c-rp-mo-br100",
+        "displayName": "chad selbert"
+      },
+      "starRating": "FIVE",
+      "comment": "Amazing place, best spot in Plovdiv",
+      "createTime": "2026-08-12T13:33:14.131069Z",
+      "updateTime": "2026-08-12T13:33:14.131069Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmMs_4rrq4Se-nP2BYq6N2kDqiWRWV70fLdhVRQQVDb4OayJReqyHm2U0QOAM5TK3Voz2dK",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT214dGNVVndaM05FYjJwV2NHbDZTVE0wVVVNMVlsRRAB"
+    },
+    {
+      "reviewId": "AbFvOqkqQJTYMS1Xkn0wWaXP9u1WR2fi-MsbWiMQq389OVAUCquxJik-Q99FiFuzsej4X4XrTXY6qw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUbYFdlcn1kD7X0EBCcpEE_trbL3pe-TLnC74imviPd1D0G8uyB=s120-c-rp-mo-ba12-br100",
+        "displayName": "Todor Todorov"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-08-05T09:45:47.536997Z",
+      "updateTime": "2026-08-05T09:45:47.536997Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkqQJTYMS1Xkn0wWaXP9u1WR2fi-MsbWiMQq389OVAUCquxJik-Q99FiFuzsej4X4XrTXY6qw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25oaUxXWklPWEJTZHpaVE9HWTFTMGRIZWpST09VRRAB"
+    },
+    {
+      "reviewId": "AbFvOql0MIBA0U4BSLsm_zb1ZXHYW5SBkd4Lxc7GDmysMlejO6yTK7yqMX9wPRxhsG5giD_fCBMbQQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKYZxYTLu7uZynWCvJ8Jm2g66OHBAM4SC7EENe1fSLCHAs_fg=s120-c-rp-mo-ba12-br100",
+        "displayName": "Mitch Hoegee"
+      },
+      "starRating": "FIVE",
+      "comment": "Amazing atmosphere, and very kind people. Great place to watch football!",
+      "createTime": "2026-08-02T17:54:32.357912Z",
+      "updateTime": "2026-08-02T17:54:32.357912Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOql0MIBA0U4BSLsm_zb1ZXHYW5SBkd4Lxc7GDmysMlejO6yTK7yqMX9wPRxhsG5giD_fCBMbQQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25OcE9UTkVRVEJGUW5GS2JGbHNNa1Y1TjNGNlprRRAB"
+    },
+    {
+      "reviewId": "AbFvOqmi7OP95jWAfWnfqXlITFcPOCCXgwSrBP6B7I6_7hIWj62qVUCdDq-krm7-hgFO1SbF56kgmg",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJrOkzNPrFe4xs0EYlxGkEXwY8xKQk4SeqL11v2cVn-BD81h3M=s120-c-rp-mo-br100",
+        "displayName": "Drago Drago"
+      },
+      "starRating": "FIVE",
+      "comment": "First, I went in just to use the bathroom. One hour later I came back because the atmosphere was so pleasant and welcoming that I wanted to have a drink! What a nice treat to discover off the beaten path!",
+      "createTime": "2026-07-24T20:07:33.796861Z",
+      "updateTime": "2026-07-24T20:07:33.796861Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmi7OP95jWAfWnfqXlITFcPOCCXgwSrBP6B7I6_7hIWj62qVUCdDq-krm7-hgFO1SbF56kgmg",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21aclptZFNWMVkxTkdZelRXMXplVGRUZWs1cFpGRRAB"
+    },
+    {
+      "reviewId": "AbFvOqkUaamSNlUUn_K81JvN2HT-hyQrpiFI2wnOqPqDkowWMYEVPr9zWAtKD8EukXtXA4qzHr2O",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocInQUKosX65nR3jhzhvNDrSls874eVAW0uaqspTh8qypCZ2ug=s120-c-rp-mo-br100",
+        "displayName": "Ervin Benyusovics"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-20T18:55:44.213562Z",
+      "updateTime": "2026-07-20T18:55:44.213562Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkUaamSNlUUn_K81JvN2HT-hyQrpiFI2wnOqPqDkowWMYEVPr9zWAtKD8EukXtXA4qzHr2O",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xRMVNXcExjRUZwWm5GNUxWaExWMU4xVDBJM1luYxAB"
+    },
+    {
+      "reviewId": "AbFvOqnz0Qs39ssyTWmQIaYEW2cUwhUMN1a9QCqY1OiVrMYc2C6C8fFuxARH_aKjc-AXlRqm9yDnHQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKP3Jjynd4elEzs1aG7VHB6-Jzxo4bozGNKg8yzNzldW6PVfA=s120-c-rp-mo-br100",
+        "displayName": "John Thomas"
+      },
+      "starRating": "FIVE",
+      "comment": "Brilliant spot to watch the football. Cheap beer and good service.",
+      "createTime": "2026-07-15T20:31:18.665162Z",
+      "updateTime": "2026-07-15T20:31:18.665162Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnz0Qs39ssyTWmQIaYEW2cUwhUMN1a9QCqY1OiVrMYc2C6C8fFuxARH_aKjc-AXlRqm9yDnHQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21ZM1FrRnpVRWhXVTJwQ1RXNXZkVEpuWlhsUVoyYxAB"
+    },
+    {
+      "reviewId": "AbFvOqlsDDjvDgKLGORE0EtXAUT9j-pN0D2LtbQYfmJ3o8a28mW8kXykAQOxNLjIjce9fSJ_5qx2aQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKsHLekTX3c_yicBC0kFChrira3v5cyPK2vrQmgPiDk7WrH0A=s120-c-rp-mo-br100",
+        "displayName": "Bb Mdnv"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-15T20:05:42.285549Z",
+      "updateTime": "2026-07-15T20:05:42.285549Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqlsDDjvDgKLGORE0EtXAUT9j-pN0D2LtbQYfmJ3o8a28mW8kXykAQOxNLjIjce9fSJ_5qx2aQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT201bFJGTlFObmhRUW1oQmRVdzNkR2hGWDAwelNsRRAB"
+    },
+    {
+      "reviewId": "AbFvOql9kIWWI0exruWJ5FbNJ3M6xD0jzV9rK4dSo4-IO-WfXnyrHLa8xSzsFf0-9F3QkeUzpGZBWw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocI7ZqQvp4LUgysEpseb1fKuzVY_9mQovg4ylWqOx105NIlM=s120-c-rp-mo-br100",
+        "displayName": "Bryn Baxendale"
+      },
+      "starRating": "FIVE",
+      "comment": "Great beer at great price, fantastic for the football",
+      "createTime": "2026-07-15T19:54:54.916968Z",
+      "updateTime": "2026-07-15T19:54:54.916968Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOql9kIWWI0exruWJ5FbNJ3M6xD0jzV9rK4dSo4-IO-WfXnyrHLa8xSzsFf0-9F3QkeUzpGZBWw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s1bE56ZFRhRnA0WHprelNsTTJObVZaUzBkcU1uYxAB"
+    },
+    {
+      "reviewId": "AbFvOqnJSN9vkyxx0Cfcxv5sEusAkGXgigZbT8h6wbGvPHQeA45q3bbUxX_mOr3YFbz7t8DCEmasCA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWXEYijSm3B38ZOLqQgacgP8xyRm6tkFVHLyVIy8sevKy7aB7L2=s120-c-rp-mo-br100",
+        "displayName": "Frances Welsh"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-15T19:53:10.695590Z",
+      "updateTime": "2026-07-15T19:53:10.695590Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnJSN9vkyxx0Cfcxv5sEusAkGXgigZbT8h6wbGvPHQeA45q3bbUxX_mOr3YFbz7t8DCEmasCA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21SWmFHSkNVbGxYVGtNelNqWnhkbE56Um5WTFNuYxAB"
+    },
+    {
+      "reviewId": "AbFvOqklommiRv0Vbc3iSQ1GjewvOpaXlxJoPlb5PRzwflERsqkvcaEq4FBtQZC6erdoROZNQ9F-",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKUXK3NYlMFkj8I5QAgFfk0x0hk7HaI6uNrSFLCAT0SurLf=s120-c-rp-mo-br100",
+        "displayName": "Callum Reid"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-15T18:56:08.012363Z",
+      "updateTime": "2026-07-15T18:56:08.012363Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqklommiRv0Vbc3iSQ1GjewvOpaXlxJoPlb5PRzwflERsqkvcaEq4FBtQZC6erdoROZNQ9F-",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2w5bFRYbGpNM1ptVlZjMmFFZHJhbXR4ZDBoaWExRRAB"
+    },
+    {
+      "reviewId": "AbFvOqnViZwI_FpZItLtt3ahWnuNGbWIUonBmdWE1wzELWHVlAbqZV_h12gHW0u6ipsRjyYKyM4Eog",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJb4jCxUkk4R9OxaixSv9O9TwPpCkt_H3tWvIMp9T3CPlwx65-u=s120-c-rp-mo-br100",
+        "displayName": "Emir Atlas"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-15T18:20:23.327623Z",
+      "updateTime": "2026-07-15T18:20:23.327623Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnViZwI_FpZItLtt3ahWnuNGbWIUonBmdWE1wzELWHVlAbqZV_h12gHW0u6ipsRjyYKyM4Eog",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKcmJYcExOVWw1T0Rnd2RGOW9WMVYwZVZGc09IYxAB"
+    },
+    {
+      "reviewId": "AbFvOqlqnGrxuGErQeNd35xOmqmv0DuSEwf2g8W1f0XRRbj-zd409rabpQDHvs0Q2njb6TYJlJpVeg",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJp_98Xw5lP20pRcmfGgVFX7Q7HQx9o_Wyzo-rZll34NhGfxg=s120-c-rp-mo-br100",
+        "displayName": "JP CN"
+      },
+      "starRating": "FIVE",
+      "comment": "Nice atmosphere!",
+      "createTime": "2026-07-15T16:26:42.436090Z",
+      "updateTime": "2026-07-15T16:26:42.436090Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqlqnGrxuGErQeNd35xOmqmv0DuSEwf2g8W1f0XRRbj-zd409rabpQDHvs0Q2njb6TYJlJpVeg",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25WclZrcHhZV3R1WHpWemExQkxUMEUyVkZoMVprRRAB"
+    },
+    {
+      "reviewId": "AbFvOqmp5fZ0keOPRs0OUneXgLZIbffPizFdg3b0dUDCL1qZ9-YDD2s1d7HEqQPtRf0_fxERp68RAA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJju7HVitQ-whhx1kLQARPQv5Rd2jy6G9lUbvRGGY5zzP3akw=s120-c-rp-mo-br100",
+        "displayName": "Elijah Campbell"
+      },
+      "starRating": "FIVE",
+      "comment": "Great drinks, great atmosphere, great prices.",
+      "createTime": "2026-07-15T16:26:38.635339Z",
+      "updateTime": "2026-07-15T16:26:38.635339Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmp5fZ0keOPRs0OUneXgLZIbffPizFdg3b0dUDCL1qZ9-YDD2s1d7HEqQPtRf0_fxERp68RAA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pOSlgyRmpPR2t6T0RnMFlUZGpiM1JrYW5aSGRFRRAB"
+    },
+    {
+      "reviewId": "AbFvOqn7gPmf_yOI-4qlCIMFCu1I9wXeXnAmEyVe3mW2L-hBVWjjyCW0MACPVDzRp9g4K1T5oQZ1",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLhkrsr9Yp6GZv2IpoEkI4KrXk8Jfjv2872XG5HGyuDnFu7AA=s120-c-rp-mo-br100",
+        "displayName": "matthew austen"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-15T16:25:21.029293Z",
+      "updateTime": "2026-07-15T16:25:21.029293Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqn7gPmf_yOI-4qlCIMFCu1I9wXeXnAmEyVe3mW2L-hBVWjjyCW0MACPVDzRp9g4K1T5oQZ1",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25weGMwWkZUVVZKUkZsTmRYVkNjVmQxWDBSS1ZIYxAB"
+    },
+    {
+      "reviewId": "AbFvOqmbs-0EICGUfnLs5MsyNRZcFwEapXXORK-Jn3edUXsw-4GMDAm5V6dYPP4xgIDCm0MKnkzmGQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWazwywmNiyVPv0L6vtTBkHbsns3QyJc-Kf5QTdLWCtujgiE9cE=s120-c-rp-mo-br100",
+        "displayName": "Nguyễn Quang Huy"
+      },
+      "starRating": "FIVE",
+      "comment": "good atmosphere with good vibes. humorous bartender making good cocktails. highly recommend!!!",
+      "createTime": "2026-07-14T20:27:56.597108Z",
+      "updateTime": "2026-07-14T20:27:56.597108Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmbs-0EICGUfnLs5MsyNRZcFwEapXXORK-Jn3edUXsw-4GMDAm5V6dYPP4xgIDCm0MKnkzmGQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT21WNVRXcHlPR1k1U2tFMk5rcEljVmRhV0d0UGJYYxAB"
+    },
+    {
+      "reviewId": "AbFvOqmZy2ipOWhGSdCXtKaY9Q7iZSTXnpHY6c7frPquoAbIsoTxYNpv1TkvokhETCyqc7vvPLSppw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVQbErRTHcyhHSyfVAbF3VaJuxIQLLgp5de9YZNjKK-7iQ5aeP6bA=s120-c-rp-mo-br100",
+        "displayName": "Ali Galal"
+      },
+      "starRating": "FIVE",
+      "comment": "The best 🔥🔥",
+      "createTime": "2026-07-14T20:27:52.315258Z",
+      "updateTime": "2026-07-14T20:27:52.315258Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmZy2ipOWhGSdCXtKaY9Q7iZSTXnpHY6c7frPquoAbIsoTxYNpv1TkvokhETCyqc7vvPLSppw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pGUFZGRnJkVTFhYW1kWk5HSjFZbmhNU2t0alJVRRAB"
+    },
+    {
+      "reviewId": "AbFvOqk2tXksBXU2_vqsItyri6lMa2HZxMpF6BpJROOzmkCZQz-cCViRebEpsmqkB0ASKF36fJvFOQ",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocL7lFiSVJNP3sbl2jSgeshPQRYK-sCyD5Ul549enuv9y17qRA=s120-c-rp-mo-br100",
+        "displayName": "Nadiia mokrenko"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-14T20:07:43.982111Z",
+      "updateTime": "2026-07-14T20:07:43.982111Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqk2tXksBXU2_vqsItyri6lMa2HZxMpF6BpJROOzmkCZQz-cCViRebEpsmqkB0ASKF36fJvFOQ",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pKT1pIVjZSRW8xVlRoSlMwUmZSMXB0T0VGc2RrRRAB"
+    },
+    {
+      "reviewId": "AbFvOqkoG_vJ6TwZ48q9EsKFIVIRCly5PeOfGOI4VrxRkC5koI1ztygH4zHnpfwh3Dr_40YbyOjQDw",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIQjbq-yT0UIc-52hsac1hZe2JmwlgroFw-xZVWZSZNAXkVKBE=s120-c-rp-mo-br100",
+        "displayName": "Lissa Evans"
+      },
+      "starRating": "FIVE",
+      "comment": "Great service and good vibes",
+      "createTime": "2026-07-14T19:44:23.615364Z",
+      "updateTime": "2026-07-14T19:44:23.615364Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkoG_vJ6TwZ48q9EsKFIVIRCly5PeOfGOI4VrxRkC5koI1ztygH4zHnpfwh3Dr_40YbyOjQDw",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSVVREVnBURFp0VEZBMVJtVnRNSGxKZDNnMFQwRRAB"
+    },
+    {
+      "reviewId": "AbFvOqn4ng3igZVQzijOM93e1r5OJEXK1p42YfeBkYHw0w_O3wc1JWQlL4dtitnQAdVPcVquxiJzrA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIx2_tg11nUTvFKRPo0cs7DfSapjPz3r9KyZsFMXuluFfIvtA=s120-c-rp-mo-br100",
+        "displayName": "Gregor Peyrebrune"
+      },
+      "starRating": "FIVE",
+      "comment": "Excellent service and great vibes",
+      "createTime": "2026-07-14T19:43:48.464334Z",
+      "updateTime": "2026-07-14T19:43:48.464334Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqn4ng3igZVQzijOM93e1r5OJEXK1p42YfeBkYHw0w_O3wc1JWQlL4dtitnQAdVPcVquxiJzrA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25KMGRIVnFabkl4UTBKa1VVUkhhSGx4ZGxOb01FRRAB"
     }
   ],
   "averageRating": 5,
   "totalReviewCount": 255,
-  "nextPageToken": "AEMIdWCPf1RSGn1C9V5HUo1nox_K7-6y8a5-8rZ1B1OByZu9u3H4VCS15AHWClp7As7ZK_I0t5QpbTLHiVJNv4vm3wtXRUETe91bmN8F8AG_TxBLZ-6Mcxgvh1XuneoD4wdUK9ChARq1pU5-iYRD4zYP7jQ6eLvKkQ"
+  "nextPageToken": "AEMIdWCPf1RSGn1C9V5HUo1nox_K7-6y8a5-8rZ1B1OByZu9uyDd9o7yzdIc5vOE05HuWb7hTb8_dZeUGX73RXBghnTmBpiev3pbInEiNWUka_riA9MPS8e7fBWLmjraiGs_dnPUjCKJ5Xw8blGxGazAw0ie3NOHiQ"
 }
