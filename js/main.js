@@ -140,13 +140,14 @@ if ($reviews.length) {
             $reviews.owlCarousel({
                 autoplay: true,
                 autoplayTimeout: 10000,
-                autoplayHoverPause: true,
+                autoplayHoverPause: false,
                 smartSpeed: 1000,
                 center: true,
                 margin: 24,
                 dots: true,
                 loop: reviews.length > 3,
-                nav: false,
+                nav: true,
+navText: ["&#10094;", "&#10095;"],
                 responsive: {
                     0: { items: 1 },
                     768: { items: 2 },
