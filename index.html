@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>The Turtle House Sports Bar</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+
+    <meta name="description" content="Turtle House sports bar in Kapana, Plovdiv. Explore upcoming events, drinks, opening hours and guest reviews.">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" type="image/png">
@@ -33,54 +33,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style>
-        body {
-            background-color: #26322D !important;
-        }
-    </style>
-
-    <style>
-        .card {border-radius: 24px; }
-        .card-img-top { border-top-left-radius: 24px; border-top-right-radius: 24px;}
-        .surprise-wheel-wrap { width: min(100%, 470px); position: relative; padding: 12px; }
-        #surprise-wheel { display: block; width: 100%; height: auto; border-radius: 50%; filter: drop-shadow(0 10px 15px rgba(0,0,0,.18)); }
-        .surprise-pointer { position: absolute; z-index: 2; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 30px solid #26322d; }
-        #surprise-spin:disabled { opacity: .65; cursor: wait; }
-        #surprise-result { min-height: 2em; color: #26322d; font-size: 1.5rem; font-weight: 800; transition: all .2s ease; }
-        #surprise-result.has-result { display: table; margin-left: auto; margin-right: auto; padding: 18px 32px; border: 3px solid #71915f; border-radius: 16px; background: #26322d; color: #fff; font-size: clamp(1.6rem, 4vw, 2.5rem); box-shadow: 0 10px 28px rgba(38,50,45,.22); }
-        #surprise-me { 
-            background: #f6f8f4; 
-         padding-top: 1.5rem !important;
-        padding-bottom: 1.5rem !important;}
-.colorbgr{
-    background: #f6f8f4;
-    padding-top: 1.5rem !important;
-}
-@media (max-width: 767px) {
-    .surprise-wheel-wrap {
-        width: min(70%, 329px);
-        padding: 8px;
-    }
-
-    #surprise-me h1 {
-        margin-bottom: .4rem !important;
-    }
-
-    #surprise-me .surprise-wheel-wrap + button {
-        margin-top: .75rem !important;
-    }
-
-    #surprise-result {
-        margin-top: .75rem !important;
-    }
-
-    #surprise-result.has-result {
-        padding: 12px 18px;
-        font-size: 1.5rem;
-    }
-}
-
-    </style>
 </head>
 
 <body>
@@ -94,16 +46,15 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Navbar & Hero Start -->
-        
+
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><img src="img/logo.png" alt="Logo"> </i>The Turtle House</h1>
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><img src="img/logo.png" alt=""> The Turtle House</h1>
 
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -115,7 +66,7 @@
                         <a href="#surprise-me" class="nav-item nav-link">Can't Decide?</a>
 
                     </div>
-                 
+
                 </div>
             </nav>
 
@@ -126,7 +77,7 @@
                             <h1 class="display-3 px-lg-5 text-white animated slideInLeft">Your friendly neighborhood sports bar
                             </h1>
                             <p class="text-primary px-lg-5 animated slideInLeft mb-4 pb-2">Where Fans Become Family</p>
-                            <!--  <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>-->
+
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="img/hero.png" alt="beer" style="max-width: 60%;">
@@ -158,7 +109,7 @@ fetch('events.json', { cache: 'no-store' })
     .then(result => {
         const container = document.getElementById('facebook-events');
 
-        const events = result.data
+        const events = (result.data || [])
             .filter(event => new Date(event.end_time || event.start_time) > new Date())
             .sort((a, b) => new Date(a.start_time) - new Date(b.start_time));
 
@@ -173,7 +124,7 @@ fetch('events.json', { cache: 'no-store' })
 
             card.innerHTML = `
                 <div class="card h-100 shadow-sm">
-                    <img class="card-img-top" style="aspect-ratio:16/9;object-fit:cover;" alt="event caver image">
+                    <img class="card-img-top" style="aspect-ratio:16/9;object-fit:cover;" alt="Event cover" loading="lazy">
                     <div class="card-body">
                         <p class="text-primary fw-bold"></p>
                         <h5 class="card-title"></h5>
@@ -215,60 +166,6 @@ fetch('events.json', { cache: 'no-store' })
 </script>
 <!-- Events End -->
 
-        <!-- Service Start 
-        <div class="container-xxl py-5" id="#">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-futbol text-primary mb-4"></i>
-                                <h5>Good games, better company
-                                </h5>
-                                <p>Big matches, shared tables, and the kind of atmosphere where strangers become
-                                    regulars.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-beer text-primary mb-4"></i>
-
-                                <h5>Drinks worth slowing down for
-                                </h5>
-                                <p>Carefully picked beers, classic cocktails, and a few Turtle House originals.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-calendar text-primary mb-4"></i>
-                                <h5>Events that feel personal
-                                </h5>
-                                <p>Quiz nights, tournaments, themed evenings, and community gatherings.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-star text-primary mb-4"></i>
-                                <h5>Host your own night
-                                </h5>
-                                <p>Reserve a table or the upstairs space for birthdays, meetups, or private celebrations.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-         Service End -->
-
-
         <!-- About Start -->
         <div class="container-xxl py-5" id="about">
             <div class="container">
@@ -277,19 +174,19 @@ fetch('events.json', { cache: 'no-store' })
                         <div class="row g-3">
                             <div class="col-6 text-start">
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
-                                    src="img/about-1.jpg">
+                                    src="img/about-1.jpg" alt="Turtle House" loading="lazy">
                             </div>
                             <div class="col-6 text-start">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s"
-                                    src="img/about-2.jpg" style="margin-top: 25%;">
+                                    src="img/about-2.jpg" alt="Turtle House" loading="lazy" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
-                                    src="img/about-4.jpg">
+                                    src="img/about-4.jpg" alt="Turtle House" loading="lazy">
                             </div>
                             <div class="col-6 text-end">
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
-                                    src="img/about-3.jpg">
+                                    src="img/about-3.jpg" alt="Turtle House" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -307,14 +204,11 @@ fetch('events.json', { cache: 'no-store' })
                             target="_blank" rel="noopener">Talk to us on Instagram</a>
 
                     </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.011189468035!2d24.742361412199717!3d42.15004737109288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1d26b736ded%3A0x7af40cbdae34e945!2sTurtle%20House!5e0!3m2!1sen!2sbg!4v1795190037151!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <iframe title="Turtle House location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.011189468035!2d24.742361412199717!3d42.15004737109288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1d26b736ded%3A0x7af40cbdae34e945!2sTurtle%20House!5e0!3m2!1sen!2sbg!4v1795190037151!5m2!1sen!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>
         <!-- About End -->
-
-     
-
 
         <!-- Menu Start -->
         <div class="container-xxl py-5" id="menu">
@@ -395,7 +289,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-								<div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -472,7 +366,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-								<div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -482,7 +376,7 @@ fetch('events.json', { cache: 'no-store' })
                                             <small class="fst-italic">Гримберген Блонд / Бутилка / 330ml</small>
                                         </div>
                                     </div>
-								</div>
+                                </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
@@ -503,7 +397,7 @@ fetch('events.json', { cache: 'no-store' })
                                             </h5>
                                             <small class="fst-italic">Карлсберг 0% / Бутилка / 330ml</small>
                                         </div>
-									</div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
@@ -527,7 +421,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-								<div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -538,7 +432,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-								<div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -560,7 +454,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-								<div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -771,7 +665,6 @@ fetch('events.json', { cache: 'no-store' })
             </div>
         </div>
 
-
            <h2 class="fst-italic">Shots</h2>
 
                                 <!-- Zombie Brain -->
@@ -898,7 +791,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-  								<div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -920,7 +813,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-  								 <div class="col-lg-6">
+                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -1053,7 +946,7 @@ fetch('events.json', { cache: 'no-store' })
                                     </div>
                                 </div>
 
-								 <div class="col-lg-6">
+                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -1086,7 +979,7 @@ fetch('events.json', { cache: 'no-store' })
                                         </div>
                                     </div>
                                 </div>
-								 <div class="col-lg-6">
+                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -1808,7 +1701,6 @@ fetch('events.json', { cache: 'no-store' })
   </div>
 </div>
 
-
                             </div>
                         </div>
                     </div>
@@ -1833,110 +1725,20 @@ fetch('events.json', { cache: 'no-store' })
         </section>
         <!-- Surprise Me Wheel End -->
 
-        <!-- Team Start 
-        <div class="container-xxl pt-5 pb-3">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
-                    <h1 class="mb-5">Good games, better company</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       Team End -->
-
-        <!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <!-- Google Reviews Start -->
+<section class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="reviews">
     <div class="container">
         <div class="text-center">
-            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-            <h1 class="mb-5">Our Clients Say!!!</h1>
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Google Reviews</h5>
+            <h1 class="mb-5">What guests say</h1>
         </div>
         <div id="google-reviews" class="owl-carousel testimonial-carousel"></div>
+        <div class="text-center mt-4">
+            <a class="btn btn-primary py-3 px-5" href="https://www.google.com/search?sca_esv=5dca0e6f8aa8611e&sxsrf=ANbL-n5NEBnuWhNzNTyfZpy2mFzCoVJIvA:1771526904535&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY97BNYv83xy2Btj40v2TQhmP9KBNXmXh_tlPHO9EwEck9xSUtmxbH3FKNccv8hgvIq3bQ4fKEu4RLGheENYSw91QpbM&q=Turtle+House+Reviews&sa=X&ved=2ahUKEwiQ-ur-m-aSAxXcDjQIHaXCMx0Q0bkNegQIJxAH&biw=2560&bih=1273&dpr=2#lrd=0x14acd1d26b736ded:0x7af40cbdae34e945,3,,,," target="_blank" rel="noopener">Leave a review</a>
+        </div>
     </div>
-</div>
-<!-- Testimonial End -->
-         <!-- Google Reviews Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="reviews">
-  <div class="container">
-    <div class="text-center">
-      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Google Reviews</h5>
-      <h1 class="mb-5">What guests say</h1>
-    </div>
-
-    <!-- WIDGET PLACEHOLDER -->
-    <div class="reviews-embed">
-      <!-- Paste your widget embed code here (script/iframe from Elfsight/Trustindex/etc.) -->
-    </div>
-
-    <div class="text-center mt-4">
-      <a class="btn btn-primary py-3 px-5"
-         href="https://www.google.com/search?sca_esv=5dca0e6f8aa8611e&sxsrf=ANbL-n5NEBnuWhNzNTyfZpy2mFzCoVJIvA:1771526904535&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY97BNYv83xy2Btj40v2TQhmP9KBNXmXh_tlPHO9EwEck9xSUtmxbH3FKNccv8hgvIq3bQ4fKEu4RLGheENYSw91QpbM&q=Turtle+House+Reviews&sa=X&ved=2ahUKEwiQ-ur-m-aSAxXcDjQIHaXCMx0Q0bkNegQIJxAH&biw=2560&bih=1273&dpr=2#lrd=0x14acd1d26b736ded:0x7af40cbdae34e945,3,,,,"
-         target="_blank" rel="noopener">
-        Leave a review
-      </a>
-    </div>
-  </div>
-</div>
+</section>
 <!-- Google Reviews End -->
-
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -1949,15 +1751,15 @@ fetch('events.json', { cache: 'no-store' })
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+359 87 722 1197</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>team@turtlehousebg.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/turtlehouseplovdiv/"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61584712465618"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" aria-label="Instagram" href="https://www.instagram.com/turtlehouseplovdiv/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61584712465618"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
                         <h5 class="text-light fw-normal">Monday - Sunday</h5>
                         <p>4PM - 11PM</p>
-            
+
                     </div>
 
                 </div>
@@ -1975,9 +1777,7 @@ fetch('events.json', { cache: 'no-store' })
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="privacy.html">Privacy Policy</a>
                             </div>
                         </div>
                     </div>
@@ -1986,9 +1786,8 @@ fetch('events.json', { cache: 'no-store' })
         </div>
         <!-- Footer End -->
 
-
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -2018,16 +1817,7 @@ fetch('events.json', { cache: 'no-store' })
         // Read the current menu so future edits to drinks automatically update the wheel.
         const getItems = (selector) => Array.from(document.querySelectorAll(selector))
             .map(node => node.textContent.trim()).filter(Boolean);
-        const beerRows = Array.from(document.querySelectorAll('#tab-1 .col-lg-6'))
-            .filter(row => !/wine|prosecco/i.test(row.querySelector('h5 span')?.textContent || ''));
-        const beers = beerRows.map(row => {
-            const name = row.querySelector('h5 span')?.textContent.trim() || '';
-            const detail = row.querySelector('small')?.textContent || '';
-            const size = detail.match(/\b(300|330|440|500)\s*ml\b/i)?.[0] || '';
-            return [name, size].filter(Boolean).join(' ');
-        }).filter(Boolean);
         const cocktails = getItems('#tab-2 .col-lg-6 h5 span:first-child').slice(0, 12);
-        const shots = getItems('#tab-2 .col-lg-6 h5 span:first-child').slice(12, 15);
         const drinks = [...cocktails];
         if (!drinks.length) { result.textContent = 'No drinks found in the menu.'; button.disabled = true; return; }
 
