@@ -1,6 +1,6 @@
 .reviews-embed {
-  max-width: 1100px;
-  margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 #google-reviews .owl-nav {
@@ -18,6 +18,7 @@
     color: white !important;
     font-size: 20px;
 }
+
 #google-reviews .testimonial-item {
     min-height: 320px;
     display: flex;
@@ -50,20 +51,19 @@
     cursor: pointer;
 }
 
-
-
 #google-reviews .testimonial-item > .d-flex {
     margin-top: auto;
 }
 
 .reviews-embed iframe,
 .reviews-embed > div {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .text-muted {
     color: #c4b9a8 !important;
 }
+
 /********** Template CSS **********/
 
 :root {
@@ -93,22 +93,21 @@
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #f6d7aa;
-  color: #F1F8FF;
-  font-weight: 600;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f6d7aa;
+    color: #F1F8FF;
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-
-
 /*** Spinner ***/
+
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -122,8 +121,8 @@
     opacity: 1;
 }
 
-
 /*** Button ***/
+
 .btn {
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
@@ -162,8 +161,8 @@
     border-radius: 2px;
 }
 
-
 /*** Navbar ***/
+
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
     margin-left: 25px;
@@ -224,12 +223,13 @@
         z-index: 999;
         background: transparent !important;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: var(--dark) !important;
     }
 }
+
 @media (max-width: 767px) {
     #google-reviews .testimonial-item {
         min-height: 0;
@@ -247,6 +247,7 @@
 }
 
 /*** Hero Header ***/
+
 .hero-header {
     background: linear-gradient(rgba(39, 50, 45, .8), rgba(17, 22, 20, .9)), url(../img/bg-hero.jpg);
     background-position: center center;
@@ -258,18 +259,18 @@
     animation: imgRotate 50s linear infinite;
 }
 
-@keyframes imgRotate { 
-    100% { 
-        transform: rotate(360deg); 
-    } 
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
 
-
 /*** Section Title ***/
+
 .section-title {
     position: relative;
     display: inline-block;
@@ -302,8 +303,8 @@
     display: none;
 }
 
-
 /*** Service ***/
+
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
@@ -321,14 +322,14 @@
     color: var(--light) !important;
 }
 
-
 /*** Food Menu ***/
+
 .nav-pills .nav-item .active {
     border-bottom: 2px solid var(--primary);
 }
 
-
 /*** Youtube Video ***/
+
 .video {
     position: relative;
     height: 100%;
@@ -445,8 +446,8 @@
     opacity: 1;
 }
 
-
 /*** Team ***/
+
 .team-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     height: calc(100% - 38px);
@@ -469,8 +470,8 @@
     border-radius: 38px 38px 0 0;
 }
 
-
 /*** Testimonial ***/
+
 .testimonial-carousel .owl-item .testimonial-item,
 .testimonial-carousel .owl-item.center .testimonial-item * {
     transition: .5s;
@@ -508,8 +509,8 @@
     border-color: var(--primary);
 }
 
-
 /*** Footer ***/
+
 .footer .btn.btn-social {
     margin-right: 5px;
     width: 35px;
