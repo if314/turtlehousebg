@@ -94,26 +94,68 @@
 
 
     // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        margin: 24,
-        dots: true,
-        loop: true,
-        nav : false,
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
+// Google Reviews carousel
+const $reviews = $("#google-reviews");
+
+if ($reviews.length) {
+    fetch("reviews.json", { cache: "no-store" })
+        .then(response => {
+            if (!response.ok) throw new Error("Unable to load reviews");
+            return response.json();
+        })
+        .then(data => {
+            const reviews = (data.reviews || []).filter(
+                review => review.comment
+            );
+
+            reviews.forEach(review => {
+                const name = review.reviewer?.displayName || "Google User";
+
+                const card = $("<div>", {
+                    class: "testimonial-item bg-transparent border rounded p-4"
+                });
+
+                card.append('<i class="fa fa-quote-left fa-2x text-primary mb-3"></i>');
+                card.append($("<p>").text(review.comment));
+
+                const author = $("<div>", {
+                    class: "d-flex align-items-center"
+                });
+
+                author.append($("<div>", {
+                    class: "avatar"
+                }).text(name.charAt(0)));
+
+                author.append(
+                    $("<div>", { class: "ps-3" }).append(
+                        $("<h5>", { class: "mb-1" }).text(name),
+                        $("<small>").text("Google Review")
+                    )
+                );
+
+                card.append(author);
+                $reviews.append(card);
+            });
+
+            $reviews.owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 10000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                center: true,
+                margin: 24,
+                dots: true,
+                loop: reviews.length > 3,
+                nav: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+        })
+        .catch(error => console.error("Google Reviews:", error));
+}
     
 })(jQuery);
 
