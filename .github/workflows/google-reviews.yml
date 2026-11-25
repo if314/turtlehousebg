@@ -1,0 +1,51 @@
+name: Update Google Reviews
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-reviews:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Google Reviews
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          ACCESS_TOKEN=$(curl -fsS -X POST \
+            https://oauth2.googleapis.com/token \
+            --data-urlencode "client_id=$GOOGLE_CLIENT_ID" \
+            --data-urlencode "client_secret=$GOOGLE_CLIENT_SECRET" \
+            --data-urlencode "refresh_token=$GOOGLE_REFRESH_TOKEN" \
+            --data-urlencode "grant_type=refresh_token" \
+            | jq -er '.access_token')
+
+          echo "::add-mask::$ACCESS_TOKEN"
+
+          curl -fsS \
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            "https://mybusiness.googleapis.com/v4/accounts/101677421656940434465/locations/5539085456771268238/reviews?pageSize=10&orderBy=updateTime%20desc" \
+            -o reviews.json
+
+          jq -e '.reviews | type == "array"' reviews.json
+
+      - name: Save reviews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reviews.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Google reviews"
+            git push
+          fi
