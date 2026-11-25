@@ -35,7 +35,7 @@ jobs:
 
           curl -fsS \
             -H "Authorization: Bearer $ACCESS_TOKEN" \
-            "https://mybusiness.googleapis.com/v4/accounts/101677421656940434465/locations/5539085456771268238/reviews?pageSize=10&orderBy=updateTime%20desc" \
+            "https://mybusiness.googleapis.com/v4/accounts/101677421656940434465/locations/5539085456771268238/reviews?pageSize=50&orderBy=updateTime%20desc" \
             -o reviews.json
 
           jq -e '.reviews | type == "array"' reviews.json
