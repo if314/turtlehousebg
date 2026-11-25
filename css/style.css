@@ -4,59 +4,6 @@
   margin: 0 auto;
 }
 
-#google-reviews .owl-nav {
-    display: flex !important;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 24px;
-}
-
-#google-reviews .owl-nav button {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #FEA116 !important;
-    color: white !important;
-    font-size: 20px;
-}
-#google-reviews .testimonial-item {
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-}
-
-#google-reviews .review-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 1.5;
-    height: 7.5em;
-}
-
-#google-reviews .expanded .review-text {
-    display: block;
-    height: auto;
-    overflow: visible;
-}
-
-#google-reviews .review-toggle {
-    background: none;
-    border: none;
-    color: inherit;
-    text-decoration: underline;
-    text-align: left;
-    padding: 0;
-    margin-bottom: 16px;
-    cursor: pointer;
-}
-
-
-
-#google-reviews .testimonial-item > .d-flex {
-    margin-top: auto;
-}
-
 .reviews-embed iframe,
 .reviews-embed > div {
   width: 100% !important;
@@ -231,21 +178,7 @@
         background: var(--dark) !important;
     }
 }
-@media (max-width: 767px) {
-    #google-reviews .testimonial-item {
-        min-height: 0;
-        padding: 20px !important;
-    }
 
-    #google-reviews .review-text {
-        height: auto;
-        -webkit-line-clamp: 5;
-    }
-
-    #google-reviews .owl-nav {
-        margin-top: 16px;
-    }
-}
 
 /*** Hero Header ***/
 .hero-header {
