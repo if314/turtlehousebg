@@ -1,6 +1,19 @@
 {
   "reviews": [
     {
+      "reviewId": "AbFvOqlkyxFijY7vhE_e06DqznW-6YOxUFBcQe3nyyCJoF3Q-uVORFbk-rjm7l405EMpsaDXbCn1",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXc4W1NYu7zzJFHPFcflripGxaZA6W5a3B6-NbxWCe--D6bVT4RwA=s120-c-rp-mo-br100",
+        "displayName": "Dimana Boyadjieva"
+      },
+      "starRating": "FOUR",
+      "comment": "(Translated by Google) Botsirana is wonderful! It made me feel comfortable and calm. I drank hot chocolate, it was okay :)))\n\n(Original)\nБоцирана е прекрасна! Създаде ми уют и спокойствие. Пих горещ шоколад, беше окей :)))",
+      "createTime": "2026-11-25T18:21:55.060498Z",
+      "updateTime": "2026-11-25T18:21:55.060498Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqlkyxFijY7vhE_e06DqznW-6YOxUFBcQe3nyyCJoF3Q-uVORFbk-rjm7l405EMpsaDXbCn1",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT210Vk9VYzJiSHBXVUd3NVpuTnphVzVOYm5RME0xRRAB"
+    },
+    {
       "reviewId": "AbFvOqlwahAmJwPTqVSlJrlGlHI_wJndkaB_QRLf7Lmt4o-uO1-MzKRKklPBGYjKfO70BTpt79T1Bw",
       "reviewer": {
         "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKKPNP2MZjvx30Zx0ar5Zavy8PdzYtOS5Um9qBPTM0nIZyu=s120-c-rp-mo-br100",
@@ -310,7 +323,7 @@
       "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqmgMiDMuj-OUXiBTmECfUF51BT07nB2FrR-fLY_JZLXpiJNyI-emjFZbtqiRv6wYL8kU7YIiQ",
       "reviewMediaItems": [
         {
-          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLck4KmEb7zXWyplZUIuxoHmm2zzBDw8Q06IcXwJE6katT7XCV19bOS-GrWHArFUD_L47b9Hr4BFBEnd0jmI_M_PNZWOMOXWrekCXDXERHu8vxp5Z4D2zoZxBJdRLVDwXArymXHCMY8mhTa0=k-no"
+          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfXjfuNXieRzP2DwsRt6fihOOhZ84GY2ZnXZmN8-GQOexe3Dvb_H45aaLeW7ne009U055PBlS0BteKovrVdWalMsVtZWYKfM49PQvtR3X3F3lWowmQAOPC9JKcUVIbwi2IlQdZiNWJRJ7pz=k-no"
         }
       ],
       "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pWeGJGaG9ibkJmTkU1Sk5tbDJZakpyTkVFeFZFRRAB"
@@ -627,22 +640,9 @@
       "updateTime": "2026-07-14T19:44:23.615364Z",
       "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkoG_vJ6TwZ48q9EsKFIVIRCly5PeOfGOI4VrxRkC5koI1ztygH4zHnpfwh3Dr_40YbyOjQDw",
       "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSVVREVnBURFp0VEZBMVJtVnRNSGxKZDNnMFQwRRAB"
-    },
-    {
-      "reviewId": "AbFvOqn4ng3igZVQzijOM93e1r5OJEXK1p42YfeBkYHw0w_O3wc1JWQlL4dtitnQAdVPcVquxiJzrA",
-      "reviewer": {
-        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIx2_tg11nUTvFKRPo0cs7DfSapjPz3r9KyZsFMXuluFfIvtA=s120-c-rp-mo-br100",
-        "displayName": "Gregor Peyrebrune"
-      },
-      "starRating": "FIVE",
-      "comment": "Excellent service and great vibes",
-      "createTime": "2026-07-14T19:43:48.464334Z",
-      "updateTime": "2026-07-14T19:43:48.464334Z",
-      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqn4ng3igZVQzijOM93e1r5OJEXK1p42YfeBkYHw0w_O3wc1JWQlL4dtitnQAdVPcVquxiJzrA",
-      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT25KMGRIVnFabkl4UTBKa1VVUkhhSGx4ZGxOb01FRRAB"
     }
   ],
   "averageRating": 5,
   "totalReviewCount": 255,
-  "nextPageToken": "AEMIdWCPf1RSGn1C9V5HUo1nox_K7-6y8a5-8rZ1B1OByZu9uyDd9o7yzdIc5vOE05HuWb7hTb8_dZeUGX73RXBghnTmBpiev3pbInEiNWUka_riA9MPS8e7fBWLmjraiGs_dnPUjCKJ5Xw8blGxGazAw0ie3NOHiQ"
+  "nextPageToken": "AEMIdWCPf1RSGn1C9V5HUo1nox_K7-6y8a5-8rZ1B1OByZu9u8BS9gN8_a4ebJrKN7vYLoI9QxBrW9Tolbouw7cc4NMmwjhbTmjfWgdZRi06qYIQa9hfzeKrRtjQgr8GXmNVp3hKRHfr1HgXIFj0iLv0byeznvO_qQ"
 }
