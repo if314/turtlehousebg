@@ -1,6 +1,19 @@
 {
   "reviews": [
     {
+      "reviewId": "AbFvOqn4ztMpXcGNU90LWGBOc1rlibibrINxoC7SqND_SuEOvby5LRrkppPwYy2yODTYE3r0G7K_DA",
+      "reviewer": {
+        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJjj5e12VNTG2lZXDo9Iz13yy9zYBtRkx4tLozRDbpIRJ-mbA=s120-c-rp-mo-ba12-br100",
+        "displayName": "Kai Richards"
+      },
+      "starRating": "FOUR",
+      "comment": "Nice little bar, pool table, card games, lots of space and friendly bartender 👍",
+      "createTime": "2026-11-26T20:14:51.891545Z",
+      "updateTime": "2026-11-26T20:14:51.891545Z",
+      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqn4ztMpXcGNU90LWGBOc1rlibibrINxoC7SqND_SuEOvby5LRrkppPwYy2yODTYE3r0G7K_DA",
+      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKU1ZHdzNjRWhpWm5aeVkzazNkbWRUUWtJMlZXYxAB"
+    },
+    {
       "reviewId": "AbFvOqlkyxFijY7vhE_e06DqznW-6YOxUFBcQe3nyyCJoF3Q-uVORFbk-rjm7l405EMpsaDXbCn1",
       "reviewer": {
         "profilePhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXc4W1NYu7zzJFHPFcflripGxaZA6W5a3B6-NbxWCe--D6bVT4RwA=s120-c-rp-mo-br100",
@@ -38,7 +51,7 @@
       "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkZ935AuI50_PxdIln_tIpMTNYHoJh1E_2R3XDFHGEdEnOczgdpCbZS1bwOp5LRPBR2efWBZA",
       "reviewMediaItems": [
         {
-          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcWyKH01iS6lfZVTsPOw_gmXLfEbdS6EUmrklkoVETBNLMTQIfZUUdMR4MXTmX4DoSkcScKZAIqYIXGbpiRMnc1QFmKI5goWSTVjBi2VuyvjPjBFFhqm_nrYFv_mZ8bctrYjHg9YhlA5twq=k-no"
+          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdYnDBo5wPiqmoElGz4sk2n8UCamKnKp3Klt6tvvdMs_9o-x7-xjqMk1Jgn7cNG7hTQmt7gq2qylerf6cJFfSzjkRKCqlQPW-Xbec7Fb24ZLBYPq96BD5AWjuP4sXukqm7G8ouMxDquDDG1=k-no"
         }
       ],
       "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pkRGFrb3diV2d4YzB4dE5HWjZPWHBTYzNWNmNXYxAB"
@@ -118,7 +131,7 @@
       "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqnJs5NGpAe_ovxSiI6AIxjhuIEHNHOg5KVhVjUou_T2QRrWEeg1Bwm71jkJY1CFIXGX-l_fQg",
       "reviewMediaItems": [
         {
-          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLe43oxDsg5v_Srx2m3fOVm_qqSZofeCaOdugHB5oOsmlDs96rjUwZFalHHQ73AuH1EKsGGckxBzJiMiAHy72RWi9HyjrXRvEgAAGBIx8DtfhyWOBiM-NSptpibRb1MEOyjdYUl1H6c_mj4=k-no"
+          "thumbnailUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLerP2dqhgwI3rSSSiTzxYoJXMsslCTIIr-0E2E_gXzG_MMOMKSU0hhvrsatwr8gzZq3qgJpzn1i9aycdboS9cLhlbon-WH-H8rzwPISBarCag5_eILvdsHJAtqvp2FjelKz_XNE_3UlLeU=k-no"
         }
       ],
       "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT20wNUxUQmlWbUpWTTFCMmVEUnVOVEkxVGtodlZHYxAB"
@@ -627,22 +640,9 @@
       "updateTime": "2026-07-14T20:07:43.982111Z",
       "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqk2tXksBXU2_vqsItyri6lMa2HZxMpF6BpJROOzmkCZQz-cCViRebEpsmqkB0ASKF36fJvFOQ",
       "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pKT1pIVjZSRW8xVlRoSlMwUmZSMXB0T0VGc2RrRRAB"
-    },
-    {
-      "reviewId": "AbFvOqkoG_vJ6TwZ48q9EsKFIVIRCly5PeOfGOI4VrxRkC5koI1ztygH4zHnpfwh3Dr_40YbyOjQDw",
-      "reviewer": {
-        "profilePhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIQjbq-yT0UIc-52hsac1hZe2JmwlgroFw-xZVWZSZNAXkVKBE=s120-c-rp-mo-br100",
-        "displayName": "Lissa Evans"
-      },
-      "starRating": "FIVE",
-      "comment": "Great service and good vibes",
-      "createTime": "2026-07-14T19:44:23.615364Z",
-      "updateTime": "2026-07-14T19:44:23.615364Z",
-      "name": "accounts/101677421656940434465/locations/5539085456771268238/reviews/AbFvOqkoG_vJ6TwZ48q9EsKFIVIRCly5PeOfGOI4VrxRkC5koI1ztygH4zHnpfwh3Dr_40YbyOjQDw",
-      "reviewReplyUrl": "https://business.google.com/n/5539085456771268238/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSVVREVnBURFp0VEZBMVJtVnRNSGxKZDNnMFQwRRAB"
     }
   ],
   "averageRating": 5,
-  "totalReviewCount": 255,
-  "nextPageToken": "AEMIdWCPf1RSGn1C9V5HUo1nox_K7-6y8a5-8rZ1B1OByZu9u8BS9gN8_a4ebJrKN7vYLoI9QxBrW9Tolbouw7cc4NMmwjhbTmjfWgdZRi06qYIQa9hfzeKrRtjQgr8GXmNVp3hKRHfr1HgXIFj0iLv0byeznvO_qQ"
+  "totalReviewCount": 256,
+  "nextPageToken": "AEMIdWCPf1RSGn1C9V5HUo1nox_K7-6y8a5-8rZ1B1OByZu9uz2aNPnNtUfLDpHV11EB30UQABE-qS7DRVlFEpoFWh5nZfW27Mdt4hBFvdfid3BZTa-XqxpNrP-VLpSULhMbaDUUQ5WV1hjr7aniKXoDqRsz60McWg"
 }
